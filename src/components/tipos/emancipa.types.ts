@@ -1,7 +1,19 @@
-export interface TejaInterfaz {}
+export interface TejaInterfaz {
+  altura: string;
+  imagen: string;
+  texto: string;
+  titulo: string;
+  tipo: TejaTipo
+}
+
+export enum TejaTipo {
+  Imagen,
+  Texto,
+}
 
 export type Dictionary = {
   Home: {};
+  Tejas: {};
   Nav: {
     lan: string;
     guerrera: string;
@@ -11,13 +23,6 @@ export type Dictionary = {
   };
 };
 
-
-export type TejasProps = {
-  tejasCargando: boolean
-  masTejasCargando: boolean
-  manejarMasElementos: () => Promise<void>
-  elementos: {
-    hasMore: boolean,
-    items: TejaInterfaz[]
-  }
+export type TejaCambioProps = {
+  datos: TejaInterfaz
 }

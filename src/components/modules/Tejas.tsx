@@ -6,7 +6,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { debounce } from "lodash";
 import { stringify } from "querystring";
 import TejaCambio from "./TejaCambio";
-import { TejaInterfaz, TejasProps } from "../tipos/emancipa.types";
+import { TejaInterfaz } from "../tipos/emancipa.types";
+import useTejas from "../hooks/useTejas";
 
 const TejasCambioMemo = memo(TejaCambio);
 
@@ -15,12 +16,9 @@ const useDeepMemoize = (value: Object[]) => {
   return hash;
 };
 
-const Tejas: FunctionComponent<TejasProps> = ({
-  tejasCargando,
-  masTejasCargando,
-  manejarMasElementos,
-  elementos,
-}): JSX.Element => {
+const Tejas: FunctionComponent = (): JSX.Element => {
+  const { tejasCargando, manejarMasElementos, masTejasCargando, elementos } =
+    useTejas();
   const searchItemsMemo = useDeepMemoize(elementos?.items || []);
   const debouncedHandleMoreSearch = useCallback(
     debounce(() => {
@@ -32,8 +30,16 @@ const Tejas: FunctionComponent<TejasProps> = ({
   );
 
   const renderTile = useCallback(
-    ({ indice, datos }: { indice: number; datos: TejaInterfaz }) => {
-      return <TejasCambioMemo key={indice} datos={datos} />;
+    ({
+      index,
+      width,
+      data,
+    }: {
+      index: number;
+      width: number;
+      data: TejaInterfaz;
+    }) => {
+      return <TejasCambioMemo key={index} datos={data} />;
     },
     [searchItemsMemo]
   );
@@ -65,15 +71,15 @@ const Tejas: FunctionComponent<TejasProps> = ({
             masTejasCargando
               ? [
                   ...(elementos?.items || []),
-                  ...Array.from({ length: 20 }, (_) => ({
+                  ...(Array.from({ length: 20 }, (_) => ({
                     id: Math.random(),
-                    type: "loader",
-                  })),
+                    tipo: "loader",
+                  })) as any),
                 ]
               : tejasCargando
               ? Array.from({ length: 20 }, (_) => ({
                   id: Math.random(),
-                  type: "loader",
+                  tipo: "loader",
                 }))
               : elementos?.items || []
           }

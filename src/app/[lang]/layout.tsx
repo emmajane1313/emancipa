@@ -1,17 +1,22 @@
 import { Metadata } from "next";
-import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import "./../../globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.emancipa.xyz"),
   title: "Emancipa",
   description:
     "We will not be banned. All genders, all loves, all lives, we will not be banned. Women will not stay banned. Women, life, freedom. زن زندگی آزادی",
-  openGraph: {
-    images: [
+  twitter: {
+    card: "summary_large_image",
+    images:
       "https://thedial.infura-ipfs.io/ipfs/QmSuzW4UN6Fs3HmTydpmLaSk4g4mBMpjCj1GgLqbXuoTBQ",
-    ],
+    title: "Emancipa",
+    description:
+      "We will not be banned. All genders, all loves, all lives, we will not be banned. Women will not stay banned. Women, life, freedom. زن زندگی آزادی",
+  },
+  openGraph: {
+    images:
+      "https://thedial.infura-ipfs.io/ipfs/QmSuzW4UN6Fs3HmTydpmLaSk4g4mBMpjCj1GgLqbXuoTBQ",
     title: "Emancipa",
     description:
       "We will not be banned. All genders, all loves, all lives, we will not be banned. Women will not stay banned. Women, life, freedom. زن زندگی آزادی",
@@ -38,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -13,6 +13,9 @@ const config: Config = {
         azul: "#B1CBC8",
         rosa: "#CB708D"
       },
+      fontFamily: {
+        arana: "Eclipse"
+      }
     },
   },
   plugins: [],

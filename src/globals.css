@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: "Eclipse";
+  src: url("/fonts/eclipse.ttf");
+}
+
 body {
   background-color: #D5DBE0;
 }

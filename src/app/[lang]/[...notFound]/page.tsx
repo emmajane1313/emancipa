@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getDictionary } from "../../dictionaries";
+import { getDictionary } from "../dictionaries";
 
 export default async function NotFound({
   params: { lang },
