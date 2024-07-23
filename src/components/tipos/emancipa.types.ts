@@ -4,6 +4,7 @@ export interface TejaInterfaz {
   texto: string;
   titulo: string;
   tipo: TejaTipo
+  color: string;
 }
 
 export enum TejaTipo {

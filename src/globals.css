@@ -2,12 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: "Eclipse";
   src: url("/fonts/eclipse.ttf");
 }
 
 body {
-  background-color: #D5DBE0;
+  background-color: #d5dbe0;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-track:active {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background-color: transparent !important;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar-track:active {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
+div::-webkit-scrollbar-thumb:active {
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8478b; /* Azul de fondo */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #409cb1; /* Amarillo */
+  border-radius: 6px;
+  border: 3px solid #e8478b; /* Azul de fondo */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #409cb1 #e8478b; /* thumb color, track color */
 }
