@@ -1,9 +1,9 @@
 We will not be banned.
 
-All genders, all loves, all lives, we will not be banned.
+Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos.
 
 Women will not stay banned.
 
-Women, life, freedom. ‌ زن زندگی آزادی
+.زن زندگی آزادی
 
 emancipa.xyz

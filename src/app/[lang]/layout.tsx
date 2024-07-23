@@ -5,21 +5,21 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.emancipa.xyz"),
   title: "Emancipa",
   description:
-    "We will not be banned. All genders, all loves, all lives, we will not be banned. Women will not stay banned. Women, life, freedom. زن زندگی آزادی",
+    "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
   twitter: {
     card: "summary_large_image",
     images:
       "https://thedial.infura-ipfs.io/ipfs/QmSuzW4UN6Fs3HmTydpmLaSk4g4mBMpjCj1GgLqbXuoTBQ",
     title: "Emancipa",
     description:
-      "We will not be banned. All genders, all loves, all lives, we will not be banned. Women will not stay banned. Women, life, freedom. زن زندگی آزادی",
+      "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
   },
   openGraph: {
     images:
       "https://thedial.infura-ipfs.io/ipfs/QmSuzW4UN6Fs3HmTydpmLaSk4g4mBMpjCj1GgLqbXuoTBQ",
     title: "Emancipa",
     description:
-      "We will not be banned. All genders, all loves, all lives, we will not be banned. Women will not stay banned. Women, life, freedom. زن زندگی آزادی",
+      "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
   },
 };
 export async function generateStaticParams() {
