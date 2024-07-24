@@ -1,11 +1,8 @@
 {
-    "Home": {},
-    "Nav": {
-      "lan": "Choose Language",
-      "guerrera": "Warrior Sisters"
-    },
-    "404": {
-      "nada": "Error 404: This page has been hijacked by rogue NPCs. We are negotiating it's liberation."
-    }
+  "Home": {
+    "toma": "Kit de dissidência visual: cartazes e adesivos prontos para a rua. Imprima, Cole, Propague. Tudo CC0."
+  },
+  "404": {
+    "nada": "Erro 404: A página foi sequestrada por NPCs rebeldes. Estamos negociando sua libertação."
   }
-  
+}

@@ -3,7 +3,7 @@ export interface TejaInterfaz {
   imagen: string;
   texto: string;
   titulo: string;
-  tipo: TejaTipo
+  tipo: TejaTipo;
   color: string;
 }
 
@@ -13,11 +13,8 @@ export enum TejaTipo {
 }
 
 export type Dictionary = {
-  Home: {};
-  Tejas: {};
-  Nav: {
-    lan: string;
-    guerrera: string;
+  Home: {
+    toma: string;
   };
   "404": {
     nada: string;
@@ -25,5 +22,5 @@ export type Dictionary = {
 };
 
 export type TejaCambioProps = {
-  datos: TejaInterfaz
-}
+  datos: TejaInterfaz;
+};

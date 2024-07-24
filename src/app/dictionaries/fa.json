@@ -1,11 +1,9 @@
 {
-    "Home": {},
-    "Nav": {
-      "lan": "Choose Language",
-      "guerrera": "Warrior Sisters"
-    },
+  "Home": {
+    "toma": "جعبه ابزار اعتراض بصری: پوسترها و برچسب‌های آماده خیابان. چاپ کنید، بچسبانید، منتشر کنید. همه CC0."
+  },
     "404": {
-      "nada": "Error 404: This page has been hijacked by rogue NPCs. We are negotiating it's liberation."
+      "nada": "خطای 404: این صفحه توسط ان‌پی‌سی‌های شورشی ربوده شده است. ما در حال مذاکره برای آزادی آن هستیم."
     }
   }
   

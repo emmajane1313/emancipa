@@ -1,11 +1,9 @@
 {
-    "Home": {},
-    "Nav": {
-      "lan": "Choose Language",
-      "guerrera": "Warrior Sisters"
-    },
+  "Home": {
+    "toma": "ערכת מחאה חזותית: כרזות ומדבקות מוכנות לרחוב. הדפס, הדבק, הפץ. הכל CC0."
+  },
     "404": {
-      "nada": "Error 404: This page has been hijacked by rogue NPCs. We are negotiating it's liberation."
+      "nada": "שגיאה 404: הדף נחטף על ידי דמויות משנה מורדות. אנו מנהלים משא ומתן לשחרורו."
     }
   }
   

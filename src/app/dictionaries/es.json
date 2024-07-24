@@ -1,17 +1,6 @@
 {
-  "Home": {},
-  "Nav": {
-    "lan": "Elija Idioma",
-    "guerrera": "Hermanas Guerreras"
-  },
-  "Tejas": {
-    "octubre": "El 7 de octubre de 2023. Las mujeres Judías fueron violadas brutalmente por la organziación terrorista e islamista, Hamas. Ser una feminista significa creer a las mujeres judías, como todas las mujeres.",
-    "trans": "Las mujeres trans son mujeres",
-    "cuerpo": "Tú eres la única dueña de tu cuerpo. Tu cuerpo, tu identidad, tus normas.",
-    "decisiones": "Tu cuerpo, tu independencia, tus decisiones: pilares inquebrantables de tu libertad personal.",
-    "deporte": "Para preservar la equidad en el deporte, ¿por qué no replantear las categorías? Clasifiquemos por peso y capacidad física, no por género.",
-    "baño": "La arquitectura moldea nuestra experiencia en espacios públicos. Así como las normas ADA han revolucionado la accesibilidad, necesitamos rediseñar los baños públicos con estándares inclusivos y basados en evidencia. Estudios demuestran que la iluminación adecuada reduce hasta un 20% los incidentes de seguridad en espacios públicos. La disposición de los cubículos, con puertas que lleguen del suelo al techo, aumenta la privacidad y reduce la ansiedad en un 35% según encuestas recientes. El uso de materiales acústicos puede disminuir el ruido ambiental en un 40%, creando ambientes más tranquilos. Implementar entradas sin puertas, similar a los aeropuertos, facilita el flujo y reduce puntos de contacto en un 60%. Integrar sistemas de alarma discretos y cámaras en áreas comunes puede incrementar la sensación de seguridad en un 45%. Establecer pautas arquitectónicas claras para baños inclusivos no solo mejora la funcionalidad, sino que crea espacios verdaderamente seguros y acogedores para todos los géneros, aumentando el bienestar general de los usuarios en un estimado 50%.",
-    "mujer": "Women, Life, Freedom"
+  "Home": {
+    "toma": "Kit de disenso visual: carteles y pegatinas listos para la calle. Imprime, Pega, Propaga. Todo CC0."
   },
   "404": {
     "nada": "Error 404: La página ha sido secuestrada por NPCs rebeldes. Estamos negociando su liberación."

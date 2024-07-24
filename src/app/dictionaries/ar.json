@@ -1,11 +1,8 @@
 {
-    "Home": {},
-    "Nav": {
-      "lan": "Choose Language",
-      "guerrera": "Warrior Sisters"
-    },
-    "404": {
-      "nada": "Error 404: This page has been hijacked by rogue NPCs. We are negotiating it's liberation."
-    }
+  "Home": {
+    "toma": "مجموعة أدوات الاحتجاج البصري: ملصقات ولاصقات جاهزة للشوارع. اطبع، الصق، انشر. الكل CC0."
+  },
+  "404": {
+    "nada": "خطأ 404: تم اختطاف الصفحة من قبل شخصيات غير لاعبة متمردة. نحن نتفاوض على إطلاق سراحها."
   }
-  
+}

@@ -1,11 +1,9 @@
 "use client";
-import Image from "next/legacy/image";
 import {
   PiArrowFatLinesLeftFill,
   PiArrowFatLinesRightFill,
 } from "react-icons/pi";
 import { usePathname, useRouter } from "next/navigation";
-import { INFURA_GATEWAY } from "@/lib/constantos";
 import { Dictionary } from "../tipos/emancipa.types";
 
 function Footer({ dict }: { dict: Dictionary }) {
@@ -18,98 +16,72 @@ function Footer({ dict }: { dict: Dictionary }) {
           className="relative flex items-center justify-center w-fit h-fit active:scale-95 cursor-pointer"
           onClick={() =>
             router.push(
-              path.includes("/en/")
-                ? path.replace("/en/", "/es/")
-                : path.replace("/es/", "/en/")
+              path.includes("/es/")
+                ? path.replace("/es/", "/en/")
+                : path.includes("/en/")
+                ? path.replace("/en/", "/pt/")
+                : path.includes("/pt/")
+                ? path.replace("/pt/", "/ar/")
+                : path.includes("/ar/")
+                ? path.replace("/ar/", "/fa/")
+                : path.includes("/fa/")
+                ? path.replace("/fa/", "/uk/")
+                : path.includes("/uk/")
+                ? path.replace("/uk/", "/he/")
+                : path.replace("/he/", "/es/")
             )
           }
         >
-          <PiArrowFatLinesLeftFill size={15} color={"white"} />
+          <PiArrowFatLinesLeftFill size={10} color={"black"} />
         </div>
-        <div className="relative flex items-center justify-center w-10 h-9">
-          <Image
-            draggable={false}
-            layout="fill"
-            src={`${INFURA_GATEWAY}/ipfs/${
-              path.includes("/en/")
-                ? "QmWDGpLPFi3cejfF3uBdFfjE9v2yeyFRShn5DQhiKXgDdo"
-                : "QmNTNfAqo6v4T1fQc8YVPAnKmLTVdyripzBYyLc6HXMSEA"
-            }`}
-          />
+        <div className="relative flex items-center justify-center w-fit h-fit flex items-center justify-center font-arana">
+          {path.includes("/es/")
+            ? "es"
+            : path.includes("/en/")
+            ? "en"
+            : path.includes("/pt/")
+            ? "br"
+            : path.includes("/ar/")
+            ? "ar"
+            : path.includes("/fa/")
+            ? "fa"
+            : path.includes("/uk/")
+            ? "uk"
+            : "he"}
         </div>
         <div
           className="relative flex items-center justify-center w-fit h-fit active:scale-95 cursor-pointer"
           onClick={() =>
             router.push(
-              path.includes("/en/")
-                ? path.replace("/en/", "/es/")
-                : path.replace("/es/", "/en/")
+              path.includes("/es/")
+                ? path.replace("/es/", "/en/")
+                : path.includes("/en/")
+                ? path.replace("/en/", "/pt/")
+                : path.includes("/pt/")
+                ? path.replace("/pt/", "/ar/")
+                : path.includes("/ar/")
+                ? path.replace("/ar/", "/fa/")
+                : path.includes("/fa/")
+                ? path.replace("/fa/", "/uk/")
+                : path.includes("/uk/")
+                ? path.replace("/uk/", "/he/")
+                : path.replace("/he/", "/es/")
             )
           }
         >
-          <PiArrowFatLinesRightFill size={15} color={"white"} />
+          <PiArrowFatLinesRightFill size={10} color={"black"} />
         </div>
       </div>
-      <div className="relative w-fit h-fit flex flex-col gap-2 items-center justify-center mr-0">
-        <div className="w-fit h-fit flex items-center justify-center font-arana text-black text-xs text-center uppercase">
-          {dict.Nav.guerrera}
-        </div>
-        <div className="relative w-fit h-fit items-center justify-center flex flex-wrap gap-3">
-          {[
-            {
-              image: "QmRvJQiQaeExbGds6SZDcv2Tz7sVF71NW3UKMuDTzYb3QJ",
-              link: "https://f3manifesto.xyz/",
-              title: "F3Manifesto",
-              width: 100,
-              height: 100
-            },
-            {
-              image: "QmWgnkX1rn8EWX8tg2dYzbisLxecJifNvsFHyGkrgjKSvN",
-              link: "https://digitalax.xyz/",
-              title: "Digitalax",
-              width: 40,
-              height: 40
-            },
-            {
-              image: "QmaNMrJo7TqEpvsveTFJk7zwBbS4SukM3gnuVwhiY5sCoa",
-              link: "https://npcstudio.xyz/",
-              title: "NPC Studio",
-              width: 45,
-              height: 50
-            },
-          ].map(
-            (
-              item: {
-                image: string;
-                title: string;
-                link: string;
-                width: number;
-                height: number
-              },
-              index: number
-            ) => {
-              return (
-                <div
-                  key={index}
-                  className="relative flex items-center justify-center cursor-pointer active:scale-95 w-8 bg-white border border-black rounded-full p-2 h-8"
-                  onClick={() => window.open(item.link)}
-                  title={item.title}
-                >
-                  <div className="relative flex w-fit h-fit items-center justify-center">
-                    <Image
-                      src={`${INFURA_GATEWAY}/ipfs/${item.image}`}
-                      // layout="fill"
-                      objectFit="contain"
-                      draggable={false}
-                      width={item.width}
-                      height={item.height}
-                    />
-                  </div>
-                </div>
-              );
-            }
-          )}
-        </div>
+      <div
+        className={`w-full p-2 h-fit flex items-center justify-center font-arana text-black  text-center uppercase break-words ${
+          path.includes("/es/") ||
+          path.includes("/en/") ||
+          path.includes("/pt/")
+            ? "text-[0.5rem]"
+            : "text-[1rem]"
+        }`}
+      >
+        {dict.Home.toma}
       </div>
     </div>
   );

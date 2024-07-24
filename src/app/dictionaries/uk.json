@@ -1,11 +1,8 @@
 {
-    "Home": {},
-    "Nav": {
-      "lan": "Choose Language",
-      "guerrera": "Warrior Sisters"
-    },
-    "404": {
-      "nada": "Error 404: This page has been hijacked by rogue NPCs. We are negotiating it's liberation."
-    }
+  "Home": {
+    "toma": "Набір візуального протесту: плакати та наліпки, готові до вулиць. Друкуй, Клей, Поширюй. Все CC0."
+  },
+  "404": {
+    "nada": "Помилка 404: Сторінку викрали бунтівні NPC. Ми ведемо переговори щодо її звільнення."
   }
-  
+}
