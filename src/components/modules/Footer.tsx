@@ -10,7 +10,7 @@ function Footer({ dict }: { dict: Dictionary }) {
   const router = useRouter();
   const path = usePathname();
   return (
-    <div className="relative w-full h-fit flex items-center justify-center gap-10 flex-col mb-0 p-4">
+    <div className="relative w-full h-fit flex items-center justify-center gap-3 flex-col mb-0 p-4">
       <div className="relative w-fit h-fit flex items-center justify-center flex-row gap-2">
         <div
           className="relative flex items-center justify-center w-fit h-fit active:scale-95 cursor-pointer"
@@ -32,9 +32,9 @@ function Footer({ dict }: { dict: Dictionary }) {
             )
           }
         >
-          <PiArrowFatLinesLeftFill size={10} color={"black"} />
+          <PiArrowFatLinesLeftFill size={10} color={"white"} />
         </div>
-        <div className="relative flex items-center justify-center w-fit h-fit flex items-center justify-center font-arana">
+        <div className="relative flex items-center justify-center w-fit h-fit flex items-center justify-center font-arana text-white">
           {path.includes("/es/")
             ? "es"
             : path.includes("/en/")
@@ -69,11 +69,11 @@ function Footer({ dict }: { dict: Dictionary }) {
             )
           }
         >
-          <PiArrowFatLinesRightFill size={10} color={"black"} />
+          <PiArrowFatLinesRightFill size={10} color={"white"} />
         </div>
       </div>
       <div
-        className={`w-full p-2 h-fit flex items-center justify-center font-arana text-black  text-center uppercase break-words ${
+        className={`w-full p-2 h-fit flex items-center justify-center font-arana text-white  text-center uppercase break-words ${
           path.includes("/es/") ||
           path.includes("/en/") ||
           path.includes("/pt/")
