@@ -66,6 +66,15 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="fill"
           draggable={false}
+          src={`${INFURA_GATEWAY}/ipfs/QmNNS4wKZaXggt9K4Ww6RKzTpjHJLxS7Vr5LmNA5akeTJ1`}
+          objectFit="cover"
+          priority
+        />
+      </div>
+      <div className="relative w-full h-[130rem] flex items-start justify-start ">
+        <Image
+          layout="fill"
+          draggable={false}
           src={`${INFURA_GATEWAY}/ipfs/QmSscfUkSXxqRPAeC3VURKiiWj5sbfdwSoeDHUiwefjGdF`}
           objectFit="cover"
           priority
