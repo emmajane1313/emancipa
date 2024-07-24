@@ -99,8 +99,8 @@ const Principal: FunctionComponent = (): JSX.Element => {
           src={`${INFURA_GATEWAY}/ipfs/QmWavSbkzSVBBGdKwZBCUZ1WpTvgnxctXfULkiJ86F2QxU`}
           objectFit="contain"
           priority
-          width={896}
-          height={1360}
+          width={1035}
+          height={1592}
         />
       </div>
     </div>
