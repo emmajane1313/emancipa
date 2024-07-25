@@ -173,7 +173,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmQzh1j1Rsoh3jbspopN4nqpmcQ4jaCPe6ib8jN6jzJFze`}
+          src={`${INFURA_GATEWAY}/ipfs/QmXSzv2WkgjzDbXUymnVkqeK45QKVNdSUhh5gX9yLspjFw`}
           objectFit="contain"
           priority
           width={754}
