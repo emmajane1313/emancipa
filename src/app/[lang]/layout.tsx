@@ -8,15 +8,13 @@ export const metadata: Metadata = {
     "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
   twitter: {
     card: "summary_large_image",
-    images:
-      "https://thedial.infura-ipfs.io/ipfs/QmSuzW4UN6Fs3HmTydpmLaSk4g4mBMpjCj1GgLqbXuoTBQ",
+    images: "https://www.emancipa.xyz/card.png",
     title: "Emancipa",
     description:
       "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
   },
   openGraph: {
-    images:
-      "https://thedial.infura-ipfs.io/ipfs/QmSuzW4UN6Fs3HmTydpmLaSk4g4mBMpjCj1GgLqbXuoTBQ",
+    images: "https://www.emancipa.xyz/card.png/",
     title: "Emancipa",
     description:
       "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
