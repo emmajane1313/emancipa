@@ -191,6 +191,17 @@ const Principal: FunctionComponent = (): JSX.Element => {
           height={1970}
         />
       </div>
+      <div className="relative w-full">
+        <Image
+          layout="responsive"
+          draggable={false}
+          src={`${INFURA_GATEWAY}/ipfs/QmbPNx8mPKKPwt7YaDFZ9PUhag4g9eSP9wFNs4aCvEcFmj`}
+          objectFit="contain"
+          priority
+          width={945}
+          height={1473}
+        />
+      </div>
     </div>
   );
 };
