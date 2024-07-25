@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
   twitter: {
     card: "summary_large_image",
-    images: "https://www.emancipa.xyz/card.png",
+    images: "https://www.emancipa.xyz/card.png/",
     title: "Emancipa",
     description:
       "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
