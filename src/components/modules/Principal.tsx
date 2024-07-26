@@ -224,7 +224,48 @@ const Principal: FunctionComponent = (): JSX.Element => {
           height={1289}
         />
       </div>
-      
+      <div className="relative w-full h-fit flex items-start justify-start flex-row">
+        {[
+          "QmZS9LSB2L8vVULaZRGzEiXijdAMcFwHUzdfgMZxYnQam7",
+          "QmRthdHrbf2wBbV1huVqCAiAbCMmKJrYLqfNF6NEtfhpUi",
+          "QmVLmhzPcesBtbKERM5yGcZC6jZ4UgbLSWdDvE5DHLTKLJ",
+        ].map((imagen: string, indice: number) => {
+          return (
+            <div key={indice} className="relative w-full">
+              <Image
+                src={`${INFURA_GATEWAY}/ipfs/${imagen}`}
+                draggable={false}
+                layout="responsive"
+                objectFit="contain"
+                priority
+                width={922}
+                height={794}
+              />
+            </div>
+          );
+        })}
+      </div>
+      <div className="relative w-full h-fit flex items-start justify-start flex-row">
+        {[
+          "QmeXfAbhtx8jxA2RfP7d4XBdDvoR48ot2mXjiPQzQW6CAt",
+          "QmWPdbKx7bfxYQSjFRceLnQz1utuhBGHD7pNb2QgRrP6cc",
+          "Qmf65wCaJqUsFB44itaqHDikFtR9nBqNt8UJ7rr76UiRL8",
+        ].map((imagen: string, indice: number) => {
+          return (
+            <div key={indice} className="relative w-full">
+              <Image
+                src={`${INFURA_GATEWAY}/ipfs/${imagen}`}
+                draggable={false}
+                layout="responsive"
+                objectFit="contain"
+                priority
+                width={922}
+                height={794}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
