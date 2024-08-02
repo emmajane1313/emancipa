@@ -442,6 +442,39 @@ const Principal: FunctionComponent = (): JSX.Element => {
           height={1457}
         />
       </div>
+      <div className="relative w-full">
+        <Image
+          layout="responsive"
+          draggable={false}
+          src={`${INFURA_GATEWAY}/ipfs/QmZkj8JKFWabdxXZUTCJRkatrZd2wMfHZaeCYypvvLqCjv`}
+          objectFit="contain"
+          priority
+          width={1457}
+          height={817}
+        />
+      </div>
+      <div className="relative w-full">
+        <Image
+          layout="responsive"
+          draggable={false}
+          src={`${INFURA_GATEWAY}/ipfs/QmWoLW6b6mcYY9xcThcPEoEgWCjLamGA4zvnQ3Go3WoNTd`}
+          objectFit="contain"
+          priority
+          width={1457}
+          height={817}
+        />
+      </div>
+      <div className="relative w-full">
+        <Image
+          layout="responsive"
+          draggable={false}
+          src={`${INFURA_GATEWAY}/ipfs/QmPDJsMYwBspJ3AyvTJKoc7Ng9NiFDHE36GsR6f1dCpaiY`}
+          objectFit="contain"
+          priority
+          width={1457}
+          height={817}
+        />
+      </div>
     </div>
   );
 };
