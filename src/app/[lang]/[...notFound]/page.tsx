@@ -8,7 +8,7 @@ export default async function NotFound({
 }) {
   const dict = await getDictionary(lang);
   return (
-    <div className="relative w-full h-screen flex items-center justify-center text-center text-2xl font-at text-white break-words">
+    <div className="relative w-full h-screen flex items-center justify-center text-center text-2xl font-arana text-white break-words">
       <Link
         className="cursor-pointer w-fit h-fit flex items-center justify-center"
         href="/"
