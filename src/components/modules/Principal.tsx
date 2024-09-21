@@ -611,7 +611,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmaaPZ65Tkq55WLyjjEBCVkMmJcPzsBVyT7VXpW2mwVfpB`}
+          src={`${INFURA_GATEWAY}/ipfs/QmTs7PYFmjaDppmAiq4CdrTJ31LADpbn4P82N2zPvtKvFV`}
           objectFit="contain"
           priority
           width={1457}
@@ -622,7 +622,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmXUYkGZDNbQsTBucAGCCntE1JWjPWv8xV9AeAPMLFE4Zv`}
+          src={`${INFURA_GATEWAY}/ipfs/QmaJ3383VA9oywEdLT8GX6pEZJASTvrVysavkhdS8zVh5q`}
           objectFit="contain"
           priority
           width={1457}
@@ -633,7 +633,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmS3SrZ7DtgeucwF1tfbmq49LdWDcJqz79wFK11NFtQKpG`}
+          src={`${INFURA_GATEWAY}/ipfs/QmP1icaDm85HjkczjmLn7sug2GainwCxgXqdeDM1PucUJk`}
           objectFit="contain"
           priority
           width={1457}
@@ -644,7 +644,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmSDwBtLE64ZaiAAhonGkKoZHhXhZanpsYBsdhVGVY15vT`}
+          src={`${INFURA_GATEWAY}/ipfs/QmPj9mM56nJCdm2fEPxCDPV3mHUhf3hWAsSRJaUuHC2U8G`}
           objectFit="contain"
           priority
           width={1097}
@@ -655,7 +655,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmPMQSTej8uTHf2pFr6xszzPsZiQUgJjtp3vEcKn4axiUU`}
+          src={`${INFURA_GATEWAY}/ipfs/QmNjKVnpi5UvrXxWocz8gMFXeLojj1FkwpcUUrAnb4iXni`}
           objectFit="contain"
           priority
           width={689}
