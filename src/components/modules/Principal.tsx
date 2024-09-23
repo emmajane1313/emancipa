@@ -633,7 +633,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmfTd3pN3FWiV6LMhJCt4dYVkC5q2AAbgQwqoaGMpaeqWK`}
+          src={`${INFURA_GATEWAY}/ipfs/QmRcvQrRrYpdyq9UfehwoAobPXP2jaZZEiZu3Y57r2Qh4p`}
           objectFit="contain"
           priority
           width={1457}
@@ -644,7 +644,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmXexGka2aGZdGFTzdNi6GVYSiBhGC9g4sMsZEQpdd8Gbt`}
+          src={`${INFURA_GATEWAY}/ipfs/QmfTd3pN3FWiV6LMhJCt4dYVkC5q2AAbgQwqoaGMpaeqWK`}
           objectFit="contain"
           priority
           width={1097}
