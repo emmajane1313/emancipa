@@ -89,7 +89,13 @@ function Footer({ dict }: { dict: Dictionary }) {
                 ? path.replace("/yi/", "/ja/")
                 : path.includes("/ja/")
                 ? path.replace("/ja/", "/fr/")
-                : path.replace("/fr/", "/es/")
+                : path.includes("/fr/")
+                ? path.replace("/fr/", "/ym/")
+                : path.includes("/ym/")
+                ? path.replace("/ym/", "/hu/")
+                : path.includes("/hu/")
+                ? path.replace("/hu/", "/tu/")
+                : path.replace("/tu/", "/es/")
             )
           }
         >
