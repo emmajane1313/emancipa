@@ -41,6 +41,9 @@ export async function generateStaticParams() {
     { lang: "fr" },
     { lang: "yi" },
     { lang: "ja" },
+    { lang: "ym" },
+    { lang: "hu" },
+    { lang: "tu" },
   ];
 }
 
