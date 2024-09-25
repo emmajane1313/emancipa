@@ -59,6 +59,12 @@ function Footer({ dict }: { dict: Dictionary }) {
             ? "fr"
             : path.includes("/ja/")
             ? "ja"
+            : path.includes("/hu/")
+            ? "hu"
+            : path.includes("/tu/")
+            ? "tu"
+            : path.includes("/ym/")
+            ? "ym"
             : "en"}
         </div>
         <div
