@@ -1,5 +1,5 @@
 "use client";
-import { INFURA_GATEWAY } from "@/lib/constantos";
+import { INFURA_GATEWAY } from "@/lib/constantes";
 import Image from "next/legacy/image";
 import { FunctionComponent } from "react";
 
