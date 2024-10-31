@@ -114,7 +114,7 @@ function Footer({ dict }: { dict: Dictionary }) {
         {dict.Home.toma}
       </div>
       <div className="relative w-fit h-fit flex font-bit text-center break-all lowercase text-[0.6rem] text-white">
-        {path.includes("/ym/")
+        {!path.includes("/ym/")
           ? dict.Home.por + " emma-jane mackinnon-lee"
           : "emma-jane mackinnon-lee " + dict.Home.por}
       </div>
