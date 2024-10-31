@@ -17,24 +17,30 @@ function Footer({ dict }: { dict: Dictionary }) {
           onClick={() =>
             router.push(
               path.includes("/es/")
-                ? path.replace("/es/", "/en/")
-                : path.includes("/en/")
-                ? path.replace("/en/", "/pt/")
-                : path.includes("/pt/")
-                ? path.replace("/pt/", "/ar/")
-                : path.includes("/ar/")
-                ? path.replace("/ar/", "/fa/")
-                : path.includes("/fa/")
-                ? path.replace("/fa/", "/uk/")
-                : path.includes("/uk/")
-                ? path.replace("/uk/", "/he/")
-                : path.includes("/he/")
-                ? path.replace("/he/", "/yi/")
-                : path.includes("/yi/")
-                ? path.replace("/yi/", "/ja/")
-                : path.includes("/ja/")
-                ? path.replace("/ja/", "/fr/")
-                : path.replace("/fr/", "/es/")
+              ? path.replace("/es/", "/en/")
+              : path.includes("/en/")
+              ? path.replace("/en/", "/pt/")
+              : path.includes("/pt/")
+              ? path.replace("/pt/", "/ar/")
+              : path.includes("/ar/")
+              ? path.replace("/ar/", "/fa/")
+              : path.includes("/fa/")
+              ? path.replace("/fa/", "/uk/")
+              : path.includes("/uk/")
+              ? path.replace("/uk/", "/he/")
+              : path.includes("/he/")
+              ? path.replace("/he/", "/yi/")
+              : path.includes("/yi/")
+              ? path.replace("/yi/", "/ja/")
+              : path.includes("/ja/")
+              ? path.replace("/ja/", "/fr/")
+              : path.includes("/fr/")
+              ? path.replace("/fr/", "/ym/")
+              : path.includes("/ym/")
+              ? path.replace("/ym/", "/hu/")
+              : path.includes("/hu/")
+              ? path.replace("/hu/", "/tu/")
+              : path.replace("/tu/", "/es/")
             )
           }
         >
@@ -106,7 +112,9 @@ function Footer({ dict }: { dict: Dictionary }) {
         className={`w-full pt-2 px-2 h-fit flex items-center justify-center font-arana text-white  text-center uppercase break-words ${
           path.includes("/es/") ||
           path.includes("/en/") ||
-          path.includes("/pt/")
+          path.includes("/pt/") ||
+          path.includes("/fr/") ||
+          path.includes("/uk/")
             ? "text-[0.5rem]"
             : "text-[1rem]"
         }`}
