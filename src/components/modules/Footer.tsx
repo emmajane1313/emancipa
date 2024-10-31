@@ -114,7 +114,10 @@ function Footer({ dict }: { dict: Dictionary }) {
           path.includes("/en/") ||
           path.includes("/pt/") ||
           path.includes("/fr/") ||
-          path.includes("/uk/")
+          path.includes("/uk/") ||
+          path.includes("/ym/") ||
+          path.includes("/hu/") ||
+          path.includes("/tu/")
             ? "text-[0.5rem]"
             : "text-[1rem]"
         }`}
