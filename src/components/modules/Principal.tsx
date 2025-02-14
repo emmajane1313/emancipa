@@ -754,22 +754,22 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmWY1JDGkxo7xU5oHLQEdbAsrd2b2oh7ieLu8Zzv96Jwd9`}
+          src={`${INFURA_GATEWAY}/ipfs/QmTLp1Gygy6c9y5NbRUH9jbGdh5KyVTjSvUUcqvCxzzpMQ`}
           objectFit="contain"
           priority
-          width={848}
-          height={1680}
+          width={846}
+          height={1676}
         />
       </div>
       <div className="relative w-full">
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmRxvEyq49tFSsyP5yUFVcinJdGadrGHjAP56cXSJ7x3GY`}
+          src={`${INFURA_GATEWAY}/ipfs/QmVPLB4SGdtg8Q3ZdqpZEiuUcoojSEMCDYAAYKSah2ZiwK`}
           objectFit="contain"
           priority
-          width={848}
-          height={1680}
+          width={847}
+          height={1677}
         />
       </div>
     </div>
