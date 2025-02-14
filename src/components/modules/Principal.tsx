@@ -710,7 +710,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmXymTLZB4sG1NfbS3MEneSq3Be2GdfYf3EPgtEMKUVA9i`}
+          src={`${INFURA_GATEWAY}/ipfs/QmZiaeWySygkeah5V7oawzLvQMmANLUG85tHqZ5292XwUD`}
           objectFit="contain"
           priority
           width={816}
@@ -754,7 +754,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmTLp1Gygy6c9y5NbRUH9jbGdh5KyVTjSvUUcqvCxzzpMQ`}
+          src={`${INFURA_GATEWAY}/ipfs/QmTFPMf1mc1M5mEALsodGTNEitT9NLWWbQ7MUNVU2HZgWk`}
           objectFit="contain"
           priority
           width={846}
@@ -765,7 +765,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
         <Image
           layout="responsive"
           draggable={false}
-          src={`${INFURA_GATEWAY}/ipfs/QmVPLB4SGdtg8Q3ZdqpZEiuUcoojSEMCDYAAYKSah2ZiwK`}
+          src={`${INFURA_GATEWAY}/ipfs/QmNZqXS6vhTcYjbRHg4MAAqeGLtHVcr4AipDsjCqxDjQZZ`}
           objectFit="contain"
           priority
           width={847}
