@@ -563,6 +563,11 @@ const Principal: FunctionComponent = (): JSX.Element => {
               anchura: 1025,
               altura: 1537,
             },
+            {
+              imagen: "QmYXaX5XxLZjNbhZpHWiWB4QVqiee982UC5ZpxNMV9RJ7Z",
+              anchura: 1026,
+              altura: 1538,
+            },
           ].map((elemento, indice) => {
             return (
               <div key={indice} className="relative w-full">
