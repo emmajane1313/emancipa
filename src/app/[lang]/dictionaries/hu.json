@@ -1,0 +1,12 @@
+{
+  "Home": {
+    "toma": "Vizuális ellenállás eszköztár: utcai poszterek és matricák. Nyomtat, Ragaszt, Terjeszt. Mind CC0.",
+    "por": "által",
+    "error": "Valami hiba történt :/ Újra próbálod?",
+    "success": "Most már mind a tiéd!",
+    "purchase": "VÁSÁRLÁS"
+  },
+  "404": {
+    "nada": "404-es hiba: Ezt az oldalt renitens NPC-k eltérítették. Tárgyalunk a felszabadításáról."
+  }
+}

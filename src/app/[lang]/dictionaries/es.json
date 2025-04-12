@@ -1,0 +1,12 @@
+{
+  "Home": {
+    "toma": "Kit de disenso visual: carteles y pegatinas listos para la calle. Imprime, Pega, Propaga. Todo CC0.",
+    "por": "por",
+    "error": "Algo ha salido mal :/ ¿Quieres intentarlo de nuevo?",
+    "success": "¡Ya son todos tuyos!",
+    "purchase": "COMPRAR"
+  },
+  "404": {
+    "nada": "Error 404: La página ha sido secuestrada por NPCs rebeldes. Estamos negociando su liberación."
+  }
+}
