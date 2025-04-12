@@ -77,7 +77,7 @@ const Market: FunctionComponent = (): JSX.Element => {
                               }}
                               onClick={() =>
                                 window.open(
-                                  `https://explorer.testnet.lens.xyz/tx/${
+                                  `https://explorer.lens.xyz/tx/${
                                     (nft as Order)?.transactionHash
                                   }`
                                 )
