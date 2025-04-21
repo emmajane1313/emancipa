@@ -19,6 +19,8 @@ let locales = [
 ];
 let defaultLocale = "en";
 
+export const LOCALES: string[] = ["en", "es"];
+
 function getLocale(request: NextRequest) {
   let headers = {
     "accept-language": request.headers.get("accept-language") || "en",
