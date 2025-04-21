@@ -12,15 +12,12 @@ export const metadata: Metadata = {
     "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
   twitter: {
     card: "summary_large_image",
-    images:
-      "https://thedial.infura-ipfs.io/ipfs/QmYNukHXNGtvA8DdEvjZR1hMezaBkGLGxiENJC9L9EoPRL",
     title: "Emancipa",
     description:
       "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
+    creator: "@emmajane1313",
   },
   openGraph: {
-    images:
-      "https://thedial.infura-ipfs.io/ipfs/QmYNukHXNGtvA8DdEvjZR1hMezaBkGLGxiENJC9L9EoPRL",
     title: "Emancipa",
     description:
       "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
@@ -33,6 +30,11 @@ export const metadata: Metadata = {
   },
   keywords:
     "Web3, Web3 Fashion, Moda Web3, Open Source, CC0, Emma-Jane MacKinnon-Lee, Open Source LLMs, DIGITALAX, F3Manifesto, www.digitalax.xyz, www.f3manifesto.xyz, Women, Life, Freedom.",
+  creator: "Emma-Jane MacKinnon-Lee",
+  publisher: "Emma-Jane MacKinnon-Lee",
+  pinterest: {
+    richPin: true,
+  },
 };
 
 export async function generateStaticParams() {
