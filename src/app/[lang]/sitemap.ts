@@ -6,7 +6,7 @@ export default async function sitemap(params: {
 }): Promise<MetadataRoute.Sitemap> {
   return [
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${params.lang}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
       alternates: Object.fromEntries(
         LOCALES.map((lang) => [
           lang,
