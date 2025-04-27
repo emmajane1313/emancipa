@@ -8,39 +8,48 @@ import { usePathname, useRouter } from "next/navigation";
 function FooterEntry({ dict }: { dict: any }) {
   const router = useRouter();
   const path = usePathname();
+
+  const changeLanguage = (lang: string) => {
+    const segments = path.split("/");
+    segments[1] = lang;
+    const newPath = segments.join("/");
+
+    document.cookie = `NEXT_LOCALE=${lang}; path=/; SameSite=Lax`;
+
+    router.push(newPath);
+  };
+
   return (
     <div className="relative w-full h-fit flex items-center justify-center gap-3 flex-col mb-0 p-4">
       <div className="relative w-fit h-fit flex items-center justify-center flex-row gap-2">
         <div
           className="relative flex items-center justify-center w-fit h-fit active:scale-95 cursor-pointer"
           onClick={() =>
-            router.push(
-              path.includes("/es/")
-                ? path.replace("/es/", "/en/")
-                : path.includes("/en/")
-                ? path.replace("/en/", "/pt/")
-                : path.includes("/pt/")
-                ? path.replace("/pt/", "/ar/")
-                : path.includes("/ar/")
-                ? path.replace("/ar/", "/fa/")
-                : path.includes("/fa/")
-                ? path.replace("/fa/", "/uk/")
-                : path.includes("/uk/")
-                ? path.replace("/uk/", "/he/")
-                : path.includes("/he/")
-                ? path.replace("/he/", "/yi/")
-                : path.includes("/yi/")
-                ? path.replace("/yi/", "/ja/")
-                : path.includes("/ja/")
-                ? path.replace("/ja/", "/fr/")
-                : path.includes("/fr/")
-                ? path.replace("/fr/", "/ym/")
-                : path.includes("/ym/")
-                ? path.replace("/ym/", "/hu/")
-                : path.includes("/hu/")
-                ? path.replace("/hu/", "/tr/")
-                : path.replace("/tr/", "/es/")
-            )
+            path.includes("/es/")
+              ? changeLanguage("en")
+              : path.includes("/en/")
+              ? changeLanguage("pt")
+              : path.includes("/pt/")
+              ? changeLanguage("ar")
+              : path.includes("/ar/")
+              ? changeLanguage("fa")
+              : path.includes("/fa/")
+              ? changeLanguage("uk")
+              : path.includes("/uk/")
+              ? changeLanguage("he")
+              : path.includes("/he/")
+              ? changeLanguage("yi")
+              : path.includes("/yi/")
+              ? changeLanguage("ja")
+              : path.includes("/ja/")
+              ? changeLanguage("fr")
+              : path.includes("/fr/")
+              ? changeLanguage("ym")
+              : path.includes("/ym/")
+              ? changeLanguage("hu")
+              : path.includes("/hu/")
+              ? changeLanguage("tr")
+              : changeLanguage("es")
           }
         >
           <PiArrowFatLinesLeftFill size={10} color={"white"} />
@@ -75,33 +84,31 @@ function FooterEntry({ dict }: { dict: any }) {
         <div
           className="relative flex items-center justify-center w-fit h-fit active:scale-95 cursor-pointer"
           onClick={() =>
-            router.push(
-              path.includes("/es/")
-                ? path.replace("/es/", "/en/")
-                : path.includes("/en/")
-                ? path.replace("/en/", "/pt/")
-                : path.includes("/pt/")
-                ? path.replace("/pt/", "/ar/")
-                : path.includes("/ar/")
-                ? path.replace("/ar/", "/fa/")
-                : path.includes("/fa/")
-                ? path.replace("/fa/", "/uk/")
-                : path.includes("/uk/")
-                ? path.replace("/uk/", "/he/")
-                : path.includes("/he/")
-                ? path.replace("/he/", "/yi/")
-                : path.includes("/yi/")
-                ? path.replace("/yi/", "/ja/")
-                : path.includes("/ja/")
-                ? path.replace("/ja/", "/fr/")
-                : path.includes("/fr/")
-                ? path.replace("/fr/", "/ym/")
-                : path.includes("/ym/")
-                ? path.replace("/ym/", "/hu/")
-                : path.includes("/hu/")
-                ? path.replace("/hu/", "/tr/")
-                : path.replace("/tr/", "/es/")
-            )
+            path.includes("/es/")
+              ? changeLanguage("en")
+              : path.includes("/en/")
+              ? changeLanguage("pt")
+              : path.includes("/pt/")
+              ? changeLanguage("ar")
+              : path.includes("/ar/")
+              ? changeLanguage("fa")
+              : path.includes("/fa/")
+              ? changeLanguage("uk")
+              : path.includes("/uk/")
+              ? changeLanguage("he")
+              : path.includes("/he/")
+              ? changeLanguage("yi")
+              : path.includes("/yi/")
+              ? changeLanguage("ja")
+              : path.includes("/ja/")
+              ? changeLanguage("fr")
+              : path.includes("/fr/")
+              ? changeLanguage("ym")
+              : path.includes("/ym/")
+              ? changeLanguage("hu")
+              : path.includes("/hu/")
+              ? changeLanguage("tr")
+              : changeLanguage("es")
           }
         >
           <PiArrowFatLinesRightFill size={10} color={"white"} />

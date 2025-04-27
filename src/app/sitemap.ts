@@ -1,4 +1,3 @@
-import { LOCALES } from "@/middleware";
 import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -6,10 +5,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
       alternates: Object.fromEntries(
-        LOCALES.map((lang) => [
-          lang,
-          `${process.env.NEXT_PUBLIC_BASE_URL}/${lang}`,
-        ])
+        [
+          "en",
+          "es",
+          "fa",
+          "uk",
+          "ar",
+          "pt",
+          "he",
+          "yi",
+          "ja",
+          "fr",
+          "hu",
+          "tr",
+          "ym",
+        ].map((lang) => [lang, `${process.env.NEXT_PUBLIC_BASE_URL}/${lang}`])
       ),
     },
   ];
