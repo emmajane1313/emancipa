@@ -31,6 +31,19 @@ function getLocale(request: NextRequest) {
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/images") ||
+    pathname.startsWith("/fonts") ||
+    pathname.startsWith("/favicon.ico") ||
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/sitemap.xml")
+  ) {
+    return NextResponse.next();
+  }
+
+
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
@@ -43,5 +56,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|favicon.ico|fonts).*)"],
+  matcher: ["/((?!_next|images|fonts|favicon.ico|api|sitemap).*)"],
 };
