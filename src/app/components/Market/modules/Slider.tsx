@@ -1,7 +1,7 @@
 import { INFURA_GATEWAY } from "@/app/lib/constantes";
 import { chains } from "@lens-chain/sdk/viem";
 import { useModal } from "connectkit";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { FunctionComponent, JSX } from "react";
 import MarqueeText from "react-fast-marquee";
 import { useAccount } from "wagmi";
@@ -49,6 +49,7 @@ const Slider: FunctionComponent = (): JSX.Element => {
             <Image
               layout="fill"
               objectFit="contain"
+              alt="connect"
               draggable={false}
               src={`${INFURA_GATEWAY}/ipfs/${
                 address && isConnected

@@ -1,8 +1,9 @@
 export interface Collection {
-  uri: string
+  uri: string;
   prices: string[];
   collectionId: string;
   acceptedTokens: string[];
+  alt: string;
 }
 
 export interface Order {
@@ -10,5 +11,5 @@ export interface Order {
   collection: Collection;
   currency: string;
   amount: string;
-  transactionHash: string
+  transactionHash: string;
 }
