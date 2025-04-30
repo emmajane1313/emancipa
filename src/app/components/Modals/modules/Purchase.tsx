@@ -3,7 +3,7 @@ import { FunctionComponent, JSX, useContext } from "react";
 import { useAccount } from "wagmi";
 import usePurchase from "../hooks/usePurchase";
 import Image from "next/legacy/image";
-import { INFURA_GATEWAY, TOKENS } from "@/app/lib/constantes";
+import { INFURA_GATEWAY_INTERNAL, TOKENS } from "@/app/lib/constantes";
 import { AiOutlineLoading } from "react-icons/ai";
 
 const Purchase: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
@@ -25,7 +25,7 @@ const Purchase: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
             <div>
               <Image
                 draggable={false}
-                src={`${INFURA_GATEWAY}/ipfs/${
+                src={`${INFURA_GATEWAY_INTERNAL}${
                   context?.purchaseModal?.uri?.split("ipfs://")?.[1]
                 }`}
                 layout="fill"
@@ -71,7 +71,7 @@ const Purchase: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
                   <div className="relative flex w-6 h-6">
                     <Image
                       draggable={false}
-                      src={`${INFURA_GATEWAY}/ipfs/${tok?.image}`}
+                      src={`${INFURA_GATEWAY_INTERNAL}${tok?.image}`}
                       layout="fill"
                       objectFit="cover"
                       className="rounded-full"

@@ -1,4 +1,4 @@
-import { IMAGE_SET, INFURA_GATEWAY } from "@/app/lib/constantes";
+import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
 import Image from "next/image";
 import { FunctionComponent, JSX } from "react";
 import usePrincipal from "../hooks/usePrincipal";
@@ -18,9 +18,10 @@ const Principal: FunctionComponent = (): JSX.Element => {
           >
             <div className="relative w-full h-full flex">
               <Image
+
                 draggable={false}
                 alt="Emancipa | Emma-Jane MacKinnon-Lee"
-                src={`${INFURA_GATEWAY}/ipfs/${
+                src={`${INFURA_GATEWAY_INTERNAL}${
                   full
                     ? "QmaYx9Hm5S74N7Q4RLfMBn6JBnhd4YC3XEaTAE6ZiTQZFr"
                     : "QmQDtHLcRMYKiBVFN4V3oM4ZwUAJDwCh7Kf6jjVqDtSPa9"
@@ -49,7 +50,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                   alt={`${elemento.alt} | Emancipa | Emma-Jane MacKinnon-Lee`}
                   layout="responsive"
                   draggable={false}
-                  src={`${INFURA_GATEWAY}/ipfs/${elemento.imagen}`}
+                  src={`${INFURA_GATEWAY_INTERNAL}${elemento.imagen}`}
                   objectFit="contain"
                   priority
                   width={elemento.anchura}
@@ -63,7 +64,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
               return (
                 <div key={indice} className="relative w-full">
                   <Image
-                    src={`${INFURA_GATEWAY}/ipfs/${imagen.imagen}`}
+                    src={`${INFURA_GATEWAY_INTERNAL}${imagen.imagen}`}
                     draggable={false}
                     layout="responsive"
                     objectFit="contain"
@@ -81,7 +82,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
               return (
                 <div key={indice} className="relative w-full">
                   <Image
-                    src={`${INFURA_GATEWAY}/ipfs/${imagen.imagen}`}
+                    src={`${INFURA_GATEWAY_INTERNAL}${imagen.imagen}`}
                     draggable={false}
                     layout="responsive"
                     objectFit="contain"
@@ -100,7 +101,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                 <Image
                   layout="responsive"
                   draggable={false}
-                  src={`${INFURA_GATEWAY}/ipfs/${elemento.imagen}`}
+                  src={`${INFURA_GATEWAY_INTERNAL}${elemento.imagen}`}
                   objectFit="contain"
                   priority
                   alt={`${elemento.alt} | Emancipa | Emma-Jane MacKinnon-Lee`}
@@ -115,7 +116,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
               return (
                 <div key={indice} className="relative w-full">
                   <Image
-                    src={`${INFURA_GATEWAY}/ipfs/${imagen.imagen}`}
+                    src={`${INFURA_GATEWAY_INTERNAL}${imagen.imagen}`}
                     draggable={false}
                     layout="responsive"
                     objectFit="contain"
@@ -134,7 +135,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                 <div key={indice} className="relative w-full">
                   <Image
                     alt={`${imagen.alt} | Emancipa | Emma-Jane MacKinnon-Lee`}
-                    src={`${INFURA_GATEWAY}/ipfs/${imagen.imagen}`}
+                    src={`${INFURA_GATEWAY_INTERNAL}${imagen.imagen}`}
                     draggable={false}
                     layout="responsive"
                     objectFit="contain"
@@ -152,7 +153,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                 <Image
                   layout="responsive"
                   draggable={false}
-                  src={`${INFURA_GATEWAY}/ipfs/${elemento.imagen}`}
+                  src={`${INFURA_GATEWAY_INTERNAL}${elemento.imagen}`}
                   objectFit="contain"
                   priority
                   alt={`${elemento.alt} | Emancipa | Emma-Jane MacKinnon-Lee`}

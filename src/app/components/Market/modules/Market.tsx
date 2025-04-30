@@ -1,7 +1,7 @@
 import { FunctionComponent, JSX, useContext } from "react";
 import Slider from "./Slider";
 import Image from "next/image";
-import { INFURA_GATEWAY } from "@/app/lib/constantes";
+import { INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
 import useMercado from "../hooks/useMercado";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useAccount } from "wagmi";
@@ -91,7 +91,7 @@ const Market: FunctionComponent = (): JSX.Element => {
                                     alt={`${
                                       (nft as Order)?.collection?.alt
                                     } | Emancipa | Emma-Jane MacKinnon-Lee`}
-                                    src={`${INFURA_GATEWAY}/ipfs/${
+                                    src={`${INFURA_GATEWAY_INTERNAL}${
                                       (nft as Order)?.collection?.uri?.split(
                                         "ipfs://"
                                       )?.[1]
@@ -188,7 +188,7 @@ const Market: FunctionComponent = (): JSX.Element => {
                                     (nft as Order)?.collection?.alt
                                   } | Emancipa | Emma-Jane MacKinnon-Lee`}
                                   objectFit="cover"
-                                  src={`${INFURA_GATEWAY}/ipfs/${
+                                  src={`${INFURA_GATEWAY_INTERNAL}${
                                     (nft as Collection)?.uri?.split(
                                       "ipfs://"
                                     )?.[1]
@@ -224,7 +224,7 @@ const Market: FunctionComponent = (): JSX.Element => {
         <div className="relative w-10 sm:w-32 h-8 sm:h-20 flex -rotate-20">
           <Image
             draggable={false}
-            src={`${INFURA_GATEWAY}/ipfs/QmdT89cL9KxYNbPYR6qLbR5zWoho7va1aTWbhvxBCpZzLf`}
+            src={`${INFURA_GATEWAY_INTERNAL}QmdT89cL9KxYNbPYR6qLbR5zWoho7va1aTWbhvxBCpZzLf`}
             layout="fill"
             objectFit="contain"
             alt="Emancipa | Emma-Jane MacKinnon-Lee"
@@ -235,7 +235,7 @@ const Market: FunctionComponent = (): JSX.Element => {
         <div className="relative w-10 sm:w-32 h-8 sm:h-20 flex -rotate-20">
           <Image
             draggable={false}
-            src={`${INFURA_GATEWAY}/ipfs/QmY7a3SW8ygnh2XD4bHh73wBrYhHNhrUJRj5J5sx3jK9zn`}
+            src={`${INFURA_GATEWAY_INTERNAL}QmY7a3SW8ygnh2XD4bHh73wBrYhHNhrUJRj5J5sx3jK9zn`}
             layout="fill"
             objectFit="contain"
             alt="Emancipa | Emma-Jane MacKinnon-Lee"
@@ -247,7 +247,7 @@ const Market: FunctionComponent = (): JSX.Element => {
           <Image
             alt="Emancipa | Emma-Jane MacKinnon-Lee"
             draggable={false}
-            src={`${INFURA_GATEWAY}/ipfs/QmfUjMSf1YbcY3RKWDJUAxXdTTPSRfm3atYz2MzNhNY8uV`}
+            src={`${INFURA_GATEWAY_INTERNAL}QmfUjMSf1YbcY3RKWDJUAxXdTTPSRfm3atYz2MzNhNY8uV`}
             layout="fill"
             objectFit="contain"
           />
@@ -258,7 +258,7 @@ const Market: FunctionComponent = (): JSX.Element => {
           <Image
             draggable={false}
             alt="Emancipa | Emma-Jane MacKinnon-Lee"
-            src={`${INFURA_GATEWAY}/ipfs/QmV9mjDq5Qbjba2ja9m12M2NeuNKEXuDE5VKaPVsb148Jb`}
+            src={`${INFURA_GATEWAY_INTERNAL}QmV9mjDq5Qbjba2ja9m12M2NeuNKEXuDE5VKaPVsb148Jb`}
             layout="fill"
             priority
             objectFit="cover"

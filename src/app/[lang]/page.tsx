@@ -7,3 +7,5 @@ export default async function Home({ params }: { params: tParams }) {
   const dict = await (getDictionary as (locale: any) => Promise<any>)(lang);
   return <Entry dict={dict} />;
 }
+
+

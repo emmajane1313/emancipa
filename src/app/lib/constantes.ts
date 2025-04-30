@@ -1,6 +1,7 @@
 export const INFURA_GATEWAY: string = "https://thedial.infura-ipfs.io";
 export const EMANCIPA_MARKET: `0x${string}` =
   "0xc088987ec832BEC8a33A10Bc5F7768D2240FBf34";
+  export const INFURA_GATEWAY_INTERNAL: string = "https://emancipa.xyz/api/infura/";
 
 export const TOKENS: { symbol: string; contract: string; image: string }[] = [
   {

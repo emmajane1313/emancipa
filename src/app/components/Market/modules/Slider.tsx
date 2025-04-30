@@ -1,4 +1,4 @@
-import { INFURA_GATEWAY } from "@/app/lib/constantes";
+import { INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
 import { chains } from "@lens-chain/sdk/viem";
 import { useModal } from "connectkit";
 import Image from "next/image";
@@ -51,7 +51,7 @@ const Slider: FunctionComponent = (): JSX.Element => {
               objectFit="contain"
               alt="connect"
               draggable={false}
-              src={`${INFURA_GATEWAY}/ipfs/${
+              src={`${INFURA_GATEWAY_INTERNAL}${
                 address && isConnected
                   ? "QmXZEQemA1wK6h7Xymw4qKaPiU7REVM2yyAKcTLfDPeo1e"
                   : "QmeiQQdmaVDeAL9GKXd51uhDdyinRY4FidB5WPrZdR4cyn"
