@@ -1,7 +1,8 @@
 export const INFURA_GATEWAY: string = "https://thedial.infura-ipfs.io";
 export const EMANCIPA_MARKET: `0x${string}` =
   "0xc088987ec832BEC8a33A10Bc5F7768D2240FBf34";
-  export const INFURA_GATEWAY_INTERNAL: string = "https://emancipa.xyz/api/infura/";
+export const INFURA_GATEWAY_INTERNAL: string =
+  "https://emancipa.xyz/api/infura/";
 
 export const TOKENS: { symbol: string; contract: string; image: string }[] = [
   {
@@ -563,5 +564,17 @@ export const IMAGE_SET: {
     anchura: 818,
     altura: 1458,
     alt: "Lone green-haired girl stands between dying towers and a swirling neon moon",
+  },
+  {
+    imagen: "QmSF2rJ73nTnAZGFgB2QHJjpipDgkSvyxG4rFrtukaE3Dx",
+    anchura: 1025,
+    altura: 1542,
+    alt: "Fantasma 1. Own your life, don't borrow it from some deity.",
+  },
+  {
+    imagen: "QmUkwzWc273cic1u7awTL8b1MEBL4CZF8SxceFDzb5PLJQ",
+    anchura: 1025,
+    altura: 1537,
+    alt: "Fantasma 2. Own your life, don't borrow it from some deity.",
   },
 ];
