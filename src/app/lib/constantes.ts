@@ -577,4 +577,10 @@ export const IMAGE_SET: {
     altura: 1537,
     alt: "Fantasma 2. Own your life, don't borrow it from some deity.",
   },
+  {
+    imagen: "QmcumXniwDPsQKQzS7ssY6bMYXXGJYg7orv9VUwPvoBT5r",
+    anchura: 961,
+    altura: 1601,
+    alt: "Recompose who I am. Glowing fantasma on the cliff's edge.",
+  },
 ];
