@@ -2,13 +2,25 @@ import { NextResponse } from "next/server";
 import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "../lib/constantes";
 
 const locales = [
-  "en", "es", "fr", "fa", "uk", "ar", "pt", "he", "yi", "ja", "hu", "tr", "ym",
+  "en",
+  "es",
+  "fr",
+  "fa",
+  "uk",
+  "ar",
+  "pt",
+  "he",
+  "yi",
+  "ja",
+  "hu",
+  "tr",
+  "ym",
 ];
 
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://emancipa.xyz";
 
-  const imagesXml = (locale: string) =>
+  const imagesXml = () =>
     IMAGE_SET.map(
       (img) => `
         <image:image>
@@ -24,7 +36,7 @@ export async function GET() {
       const altLinks = locales
         .map(
           (alt) => `
-          <xhtml:link rel="alternate" hreflang="${alt}" href="${baseUrl}/${alt}" />
+          <link rel="alternate" hreflang="${alt}" href="${baseUrl}/${alt}" ></link>
         `
         )
         .join("");
@@ -33,8 +45,8 @@ export async function GET() {
       <url>
         <loc>${baseUrl}/${locale}</loc>
         ${altLinks}
-        <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/${locale}" />
-        ${imagesXml(locale)}
+        <link rel="alternate" hreflang="x-default" href="${baseUrl}/${locale}" ></link>
+        ${imagesXml()}
       </url>`;
     })
     .join("");
@@ -45,12 +57,12 @@ export async function GET() {
       ${locales
         .map(
           (locale) => `
-        <xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}" />
+        <link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/" ></link>
       `
         )
         .join("")}
-      <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/" />
-      ${imagesXml("en")} <!-- fallback images for root -->
+      <link rel="alternate" hreflang="x-default" href="${baseUrl}/" ></link>
+      ${imagesXml()} 
     </url>
   `;
 
