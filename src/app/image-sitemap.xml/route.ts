@@ -4,7 +4,7 @@ import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "../lib/constantes";
 export const cleanTitle = (title: string): string =>
   title
     .normalize("NFKD")
-    .replace(/['’"]/g, "")
+    .replace(/[''"]/g, "")
     .replace(/[?:!.,]/g, "")
     .replace(/\s+/g, "-")
     .replace(/_/g, "-")
@@ -12,21 +12,6 @@ export const cleanTitle = (title: string): string =>
     .toLowerCase()
     .trim();
 
-const locales = [
-  "en",
-  "es",
-  "fr",
-  "fa",
-  "uk",
-  "ar",
-  "pt",
-  "he",
-  "yi",
-  "ja",
-  "hu",
-  "tr",
-  "ym",
-];
 
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://emancipa.xyz";
@@ -37,27 +22,15 @@ export async function GET() {
         `
     <url>
       <loc>${baseUrl}/poster/${cleanTitle(image?.title)}/</loc>
-      ${locales
-        .map(
-          (locale) => `
-        <link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/poster/${cleanTitle(
-            image?.title
-          )}/" ></link>
-      `
-        )
-        .join("")}
-      <link rel="alternate" hreflang="x-default" href="${baseUrl}/poster/${cleanTitle(
-          image?.title
-        )}/" ></link>
-<image:image>
-          <image:loc>${INFURA_GATEWAY_INTERNAL}${image.imagen}/</image:loc>
-          <image:title><![CDATA[${
-            image.alt
-          } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:title>
-          <image:caption><![CDATA[${
-            image.alt
-          } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:caption>
-        </image:image>
+      <image:image>
+        <image:loc>${INFURA_GATEWAY_INTERNAL}${image.imagen}/</image:loc>
+        <image:title><![CDATA[${
+          image.alt
+        } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:title>
+        <image:caption><![CDATA[${
+          image.alt
+        } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:caption>
+      </image:image>
     </url>
       `
     ).join("");

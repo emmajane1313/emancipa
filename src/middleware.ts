@@ -48,7 +48,7 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/opengraph_image.png") ||
     pathname.startsWith("/api") ||
     pathname.startsWith("/sitemap.xml")||
-    pathname.startsWith("/image-sitemap.xml")
+    pathname.startsWith("/image-sitemap.xml") 
   ) {
     return NextResponse.next();
   }
