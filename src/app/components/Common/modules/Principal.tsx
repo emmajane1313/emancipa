@@ -4,6 +4,7 @@ import { FunctionComponent, JSX } from "react";
 import usePrincipal from "../hooks/usePrincipal";
 import { useRouter } from "next/navigation";
 import { cleanTitle } from "@/app/image-sitemap.xml/route";
+import Social from "./Social";
 
 const Principal: FunctionComponent = (): JSX.Element => {
   const { full, setFull } = usePrincipal();
@@ -64,6 +65,9 @@ const Principal: FunctionComponent = (): JSX.Element => {
                   width={elemento.anchura}
                   height={elemento.altura}
                 />
+                {Number(elemento?.socials?.length) > 0 && (
+                  <Social socials={elemento?.socials!} />
+                )}
               </div>
             );
           })}
@@ -87,6 +91,9 @@ const Principal: FunctionComponent = (): JSX.Element => {
                     width={imagen.anchura}
                     height={imagen.altura}
                   />
+                  {Number(imagen?.socials?.length) > 0 && (
+                    <Social socials={imagen?.socials!} />
+                  )}
                 </div>
               );
             })}
@@ -111,6 +118,9 @@ const Principal: FunctionComponent = (): JSX.Element => {
                     width={imagen.anchura}
                     height={imagen.altura}
                   />
+                  {Number(imagen?.socials?.length) > 0 && (
+                    <Social socials={imagen?.socials!} />
+                  )}
                 </div>
               );
             })}
@@ -134,6 +144,9 @@ const Principal: FunctionComponent = (): JSX.Element => {
                   width={elemento.anchura}
                   height={elemento.altura}
                 />
+                {Number(elemento?.socials?.length) > 0 && (
+                  <Social socials={elemento?.socials!} />
+                )}
               </div>
             );
           })}
@@ -157,6 +170,9 @@ const Principal: FunctionComponent = (): JSX.Element => {
                     alt={`${imagen.alt} | Emancipa | Emma-Jane MacKinnon-Lee`}
                     height={imagen.altura}
                   />
+                  {Number(imagen?.socials?.length) > 0 && (
+                    <Social socials={imagen?.socials!} />
+                  )}
                 </div>
               );
             })}
@@ -181,6 +197,9 @@ const Principal: FunctionComponent = (): JSX.Element => {
                     width={imagen.anchura}
                     height={imagen.altura}
                   />
+                  {Number(imagen?.socials?.length) > 0 && (
+                    <Social socials={imagen?.socials!} />
+                  )}
                 </div>
               );
             })}
@@ -204,6 +223,9 @@ const Principal: FunctionComponent = (): JSX.Element => {
                   width={elemento.anchura}
                   height={elemento.altura}
                 />
+                {Number(elemento?.socials?.length) > 0 && (
+                  <Social socials={elemento?.socials!} />
+                )}
               </div>
             );
           })}
