@@ -22,13 +22,41 @@ export async function GET() {
 
   const imagesXml = () =>
     IMAGE_SET.map(
-      (img) => `
-        <image:image>
-          <image:loc>${INFURA_GATEWAY_INTERNAL}${img.imagen}</image:loc>
-          <image:title><![CDATA[${img.alt} | Emancipa | Emma-Jane MacKinnon-Lee]]></image:title>
-          <image:caption><![CDATA[${img.alt} | Emancipa | Emma-Jane MacKinnon-Lee]]></image:caption>
-        </image:image>
-      `
+      (image) =>
+        `
+      <url>
+        <loc>${baseUrl}/poster/${image?.title
+          ?.toLowerCase()
+          ?.replaceAll(":", "__")
+          ?.replaceAll(",", "_")
+          ?.replaceAll(" ", "-")}/</loc>
+        ${locales
+          .map(
+            (locale) => `
+          <link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/poster/${image?.title
+              ?.toLowerCase()
+              ?.replaceAll(":", "__")
+              ?.replaceAll(",", "_")
+              ?.replaceAll(" ", "-")}/" ></link>
+        `
+          )
+          .join("")}
+        <link rel="alternate" hreflang="x-default" href="${baseUrl}/poster/${image?.title
+          ?.toLowerCase()
+          ?.replaceAll(":", "__")
+          ?.replaceAll(",", "_")
+          ?.replaceAll(" ", "-")}" ></link>
+  <image:image>
+            <image:loc>${INFURA_GATEWAY_INTERNAL}${image.imagen}/</image:loc>
+            <image:title><![CDATA[${
+              image.alt
+            } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:title>
+            <image:caption><![CDATA[${
+              image.alt
+            } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:caption>
+          </image:image>
+      </url>
+        `
     ).join("");
 
   const localeUrls = locales
@@ -36,17 +64,16 @@ export async function GET() {
       const altLinks = locales
         .map(
           (alt) => `
-          <link rel="alternate" hreflang="${alt}" href="${baseUrl}/${alt}" ></link>
+          <link rel="alternate" hreflang="${alt}" href="${baseUrl}/${alt}/" ></link>
         `
         )
         .join("");
 
       return `
       <url>
-        <loc>${baseUrl}/${locale}</loc>
+        <loc>${baseUrl}/${locale}/</loc>
         ${altLinks}
-        <link rel="alternate" hreflang="x-default" href="${baseUrl}/${locale}" ></link>
-        ${imagesXml()}
+        <link rel="alternate" hreflang="x-default" href="${baseUrl}/" ></link>
       </url>`;
     })
     .join("");
@@ -62,7 +89,6 @@ export async function GET() {
         )
         .join("")}
       <link rel="alternate" hreflang="x-default" href="${baseUrl}/" ></link>
-      ${imagesXml()} 
     </url>
   `;
 
@@ -74,6 +100,7 @@ export async function GET() {
 >
   ${rootUrl}
   ${localeUrls}
+  ${imagesXml()}
 </urlset>`;
 
   return new NextResponse(body, {

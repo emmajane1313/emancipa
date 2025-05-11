@@ -2,9 +2,11 @@ import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
 import Image from "next/image";
 import { FunctionComponent, JSX } from "react";
 import usePrincipal from "../hooks/usePrincipal";
+import { useRouter } from "next/navigation";
 
 const Principal: FunctionComponent = (): JSX.Element => {
   const { full, setFull } = usePrincipal();
+  const router = useRouter();
   return (
     <div
       className="relative w-full h-fit flex gap-20 items-start justify-start flex-col pt-10"
@@ -18,7 +20,6 @@ const Principal: FunctionComponent = (): JSX.Element => {
           >
             <div className="relative w-full h-full flex">
               <Image
-
                 draggable={false}
                 alt="Emancipa | Emma-Jane MacKinnon-Lee"
                 src={`${INFURA_GATEWAY_INTERNAL}${
@@ -45,7 +46,19 @@ const Principal: FunctionComponent = (): JSX.Element => {
         >
           {IMAGE_SET.slice(0, 2).map((elemento, indice) => {
             return (
-              <div key={indice} className="relative w-full">
+              <div
+                key={indice}
+                className="relative w-full cursor-pointer"
+                onClick={() =>
+                  router.push(
+                    `/poster/${elemento?.title
+                      ?.replaceAll(":", "__")
+                      ?.replaceAll(" ", "-")
+                      ?.replaceAll(",", "_")
+                      ?.toLowerCase()}`
+                  )
+                }
+              >
                 <Image
                   alt={`${elemento.alt} | Emancipa | Emma-Jane MacKinnon-Lee`}
                   layout="responsive"
@@ -62,7 +75,19 @@ const Principal: FunctionComponent = (): JSX.Element => {
           <div className="relative w-full h-fit flex items-start justify-start flex-row">
             {IMAGE_SET.slice(2, 5).map((imagen, indice: number) => {
               return (
-                <div key={indice} className="relative w-full">
+                <div
+                  key={indice}
+                  className="relative w-full cursor-pointer"
+                  onClick={() =>
+                    router.push(
+                      `/poster/${imagen?.title
+                        ?.replaceAll(":", "__")
+                        ?.replaceAll(" ", "-")
+                        ?.replaceAll(",", "_")
+                        ?.toLowerCase()}`
+                    )
+                  }
+                >
                   <Image
                     src={`${INFURA_GATEWAY_INTERNAL}${imagen.imagen}`}
                     draggable={false}
@@ -80,7 +105,19 @@ const Principal: FunctionComponent = (): JSX.Element => {
           <div className="relative w-full h-fit flex items-start justify-start flex-row">
             {IMAGE_SET.slice(5, 8).map((imagen, indice: number) => {
               return (
-                <div key={indice} className="relative w-full">
+                <div
+                  key={indice}
+                  className="relative w-full cursor-pointer"
+                  onClick={() =>
+                    router.push(
+                      `/poster/${imagen?.title
+                        ?.replaceAll(":", "__")
+                        ?.replaceAll(" ", "-")
+                        ?.replaceAll(",", "_")
+                        ?.toLowerCase()}`
+                    )
+                  }
+                >
                   <Image
                     src={`${INFURA_GATEWAY_INTERNAL}${imagen.imagen}`}
                     draggable={false}
@@ -97,7 +134,19 @@ const Principal: FunctionComponent = (): JSX.Element => {
           </div>
           {IMAGE_SET.slice(8, 22).map((elemento, indice) => {
             return (
-              <div key={indice} className="relative w-full">
+              <div
+                key={indice}
+                className="relative w-full cursor-pointer"
+                onClick={() =>
+                  router.push(
+                    `/poster/${elemento?.title
+                      ?.replaceAll(":", "__")
+                      ?.replaceAll(" ", "-")
+                      ?.replaceAll(",", "_")
+                      ?.toLowerCase()}`
+                  )
+                }
+              >
                 <Image
                   layout="responsive"
                   draggable={false}
@@ -114,7 +163,19 @@ const Principal: FunctionComponent = (): JSX.Element => {
           <div className="relative w-full h-fit flex items-start justify-start flex-row">
             {IMAGE_SET.slice(22, 25).map((imagen, indice: number) => {
               return (
-                <div key={indice} className="relative w-full">
+                <div
+                  key={indice}
+                  className="relative w-full cursor-pointer"
+                  onClick={() =>
+                    router.push(
+                      `/poster/${imagen?.title
+                        ?.replaceAll(":", "__")
+                        ?.replaceAll(" ", "-")
+                        ?.replaceAll(",", "_")
+                        ?.toLowerCase()}`
+                    )
+                  }
+                >
                   <Image
                     src={`${INFURA_GATEWAY_INTERNAL}${imagen.imagen}`}
                     draggable={false}
@@ -132,7 +193,19 @@ const Principal: FunctionComponent = (): JSX.Element => {
           <div className="relative w-full h-fit flex items-start justify-start flex-row">
             {IMAGE_SET.slice(25, 28).map((imagen, indice: number) => {
               return (
-                <div key={indice} className="relative w-full">
+                <div
+                  key={indice}
+                  className="relative w-full cursor-pointer"
+                  onClick={() =>
+                    router.push(
+                      `/poster/${imagen?.title
+                        ?.replaceAll(":", "__")
+                        ?.replaceAll(" ", "-")
+                        ?.replaceAll(",", "_")
+                        ?.toLowerCase()}`
+                    )
+                  }
+                >
                   <Image
                     alt={`${imagen.alt} | Emancipa | Emma-Jane MacKinnon-Lee`}
                     src={`${INFURA_GATEWAY_INTERNAL}${imagen.imagen}`}
@@ -149,7 +222,19 @@ const Principal: FunctionComponent = (): JSX.Element => {
           </div>
           {IMAGE_SET.slice(28).map((elemento, indice) => {
             return (
-              <div key={indice} className="relative w-full">
+              <div
+                key={indice}
+                className="relative w-full cursor-pointer"
+                onClick={() =>
+                  router.push(
+                    `/poster/${elemento?.title
+                      ?.replaceAll(":", "__")
+                      ?.replaceAll(" ", "-")
+                      ?.replaceAll(",", "_")
+                      ?.toLowerCase()}`
+                  )
+                }
+              >
                 <Image
                   layout="responsive"
                   draggable={false}

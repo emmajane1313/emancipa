@@ -1,4 +1,6 @@
 User-Agent: *
 Allow: /
 
+
 Sitemap: https://emancipa.xyz/sitemap.xml
+Sitemap: https://emancipa.xyz/image-sitemap.xml
