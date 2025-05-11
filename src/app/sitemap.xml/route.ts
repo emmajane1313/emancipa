@@ -2,6 +2,22 @@ import { NextResponse } from "next/server";
 import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "../lib/constantes";
 import { cleanTitle } from "../image-sitemap.xml/route";
 
+const locales = [
+  "en",
+  "es",
+  "fr",
+  "fa",
+  "uk",
+  "ar",
+  "pt",
+  "he",
+  "yi",
+  "ja",
+  "hu",
+  "tr",
+  "ym",
+];
+
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://emancipa.xyz";
 
@@ -11,8 +27,18 @@ export async function GET() {
         `
       <url>
         <loc>${baseUrl}/poster/${cleanTitle(image?.title)}/</loc>
-      
-      
+        ${locales
+          .map(
+            (locale) => `
+          <xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/poster/${cleanTitle(
+              image?.title
+            )}/" />
+        `
+          )
+          .join("")}
+        <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/poster/${cleanTitle(
+          image?.title
+        )}" />
   <image:image>
             <image:loc>${INFURA_GATEWAY_INTERNAL}${image.imagen}/</image:loc>
             <image:title><![CDATA[${
@@ -26,9 +52,36 @@ export async function GET() {
         `
     ).join("");
 
+  const localeUrls = locales
+    .map((locale) => {
+      const altLinks = locales
+        .map(
+          (alt) => `
+          <xhtml:link rel="alternate" hreflang="${alt}" href="${baseUrl}/${alt}/" />
+        `
+        )
+        .join("");
+
+      return `
+      <url>
+        <loc>${baseUrl}/${locale}/</loc>
+        ${altLinks}
+        <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/" />
+      </url>`;
+    })
+    .join("");
+
   const rootUrl = `
     <url>
       <loc>${baseUrl}/</loc>
+      ${locales
+        .map(
+          (locale) => `
+        <xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/" />
+      `
+        )
+        .join("")}
+      <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/" />
     </url>
   `;
 
@@ -39,7 +92,7 @@ export async function GET() {
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
   ${rootUrl}
-
+  ${localeUrls}
   ${imagesXml()}
 </urlset>`;
 
