@@ -28,14 +28,6 @@ const locales = [
   "ym",
 ];
 
-const escapeXml = (unsafe: string) =>
-  unsafe
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
-
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://emancipa.xyz";
 
@@ -59,12 +51,12 @@ export async function GET() {
         )}/" ></link>
 <image:image>
           <image:loc>${INFURA_GATEWAY_INTERNAL}${image.imagen}/</image:loc>
-          <image:title><![CDATA[${escapeXml(
+          <image:title><![CDATA[${
             image.alt
-          )} | Emancipa | Emma-Jane MacKinnon-Lee]]></image:title>
-          <image:caption><![CDATA[${escapeXml(
+          } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:title>
+          <image:caption><![CDATA[${
             image.alt
-          )} | Emancipa | Emma-Jane MacKinnon-Lee]]></image:caption>
+          } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:caption>
         </image:image>
     </url>
       `
