@@ -12,7 +12,6 @@ const PosterEntry: FunctionComponent<{
     anchura: number;
     altura: number;
     alt: string;
-    error: string;
   };
 }> = ({ elemento }): JSX.Element => {
 
