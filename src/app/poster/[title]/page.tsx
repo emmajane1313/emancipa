@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import Wrapper from "../../components/Common/modules/Wrapper";
 import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "../../lib/constantes";
 import { Metadata } from "next";
+import { cleanTitle } from "@/app/image-sitemap.xml/route";
 
 export async function generateStaticParams() {
   return IMAGE_SET.map((elemento) => ({
@@ -18,10 +19,7 @@ export const generateMetadata = async ({
 }): Promise<Metadata> => {
   const { title } = await params;
 
-  const elemento = IMAGE_SET?.find(
-    (imag) =>
-      imag?.title?.toLowerCase() == title?.toLowerCase()?.replaceAll("__", ":")?.replaceAll("_", ",")?.replaceAll("-", " ")
-  );
+  const elemento = IMAGE_SET?.find((imag) => cleanTitle(imag.title) === title);
 
   return {
     title: elemento?.title,
@@ -39,10 +37,7 @@ export default async function Poster({
 }) {
   const dict = await (getDictionary as (locale: any) => Promise<any>)("en");
   const { title } = await params;
-  const elemento = IMAGE_SET?.find(
-    (imag) =>
-      imag?.title?.toLowerCase() == title?.toLowerCase()?.replaceAll("__", ":")?.replaceAll("_", ",")?.replaceAll("-", " ")
-  );
+  const elemento = IMAGE_SET?.find((imag) => cleanTitle(imag.title) === title);
 
   return (
     <Wrapper

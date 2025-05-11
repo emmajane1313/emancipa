@@ -1,4 +1,5 @@
 import PosterEntry from "@/app/components/Common/modules/PosterEntry";
+import { cleanTitle } from "@/app/image-sitemap.xml/route";
 import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
 import { Metadata } from "next";
 
@@ -17,15 +18,7 @@ export const generateMetadata = async ({
 }): Promise<Metadata> => {
   const { title } = await params;
 
-  const elemento = IMAGE_SET?.find(
-    (imag) =>
-      imag?.title?.toLowerCase() ==
-      title
-        ?.toLowerCase()
-        ?.replaceAll("__", ":")
-        ?.replaceAll("_", ",")
-        ?.replaceAll("-", " ")
-  );
+  const elemento = IMAGE_SET?.find((imag) => cleanTitle(imag.title) === title);
 
   return {
     title: elemento?.title,
@@ -38,15 +31,7 @@ export const generateMetadata = async ({
 
 export default async function Poster({ params }: { params: posterParams }) {
   const { title } = await params;
-  const elemento = IMAGE_SET?.find(
-    (imag) =>
-      imag?.title?.toLowerCase() ==
-      title
-        ?.toLowerCase()
-        ?.replaceAll("__", ":")
-        ?.replaceAll("_", ",")
-        ?.replaceAll("-", " ")
-  );
+  const elemento = IMAGE_SET?.find((imag) => cleanTitle(imag.title) === title);
 
   return <PosterEntry elemento={elemento!} />;
 }

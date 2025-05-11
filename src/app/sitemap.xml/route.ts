@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "../lib/constantes";
+import { cleanTitle } from "../image-sitemap.xml/route";
 
 const locales = [
   "en",
@@ -25,27 +26,19 @@ export async function GET() {
       (image) =>
         `
       <url>
-        <loc>${baseUrl}/poster/${image?.title
-          ?.toLowerCase()
-          ?.replaceAll(":", "__")
-          ?.replaceAll(",", "_")
-          ?.replaceAll(" ", "-")}/</loc>
+        <loc>${baseUrl}/poster/${cleanTitle(image?.title)}/</loc>
         ${locales
           .map(
             (locale) => `
-          <link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/poster/${image?.title
-              ?.toLowerCase()
-              ?.replaceAll(":", "__")
-              ?.replaceAll(",", "_")
-              ?.replaceAll(" ", "-")}/" ></link>
+          <link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/poster/${cleanTitle(
+              image?.title
+            )}/" ></link>
         `
           )
           .join("")}
-        <link rel="alternate" hreflang="x-default" href="${baseUrl}/poster/${image?.title
-          ?.toLowerCase()
-          ?.replaceAll(":", "__")
-          ?.replaceAll(",", "_")
-          ?.replaceAll(" ", "-")}" ></link>
+        <link rel="alternate" hreflang="x-default" href="${baseUrl}/poster/${cleanTitle(
+          image?.title
+        )}" ></link>
   <image:image>
             <image:loc>${INFURA_GATEWAY_INTERNAL}${image.imagen}/</image:loc>
             <image:title><![CDATA[${

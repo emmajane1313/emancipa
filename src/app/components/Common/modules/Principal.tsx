@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FunctionComponent, JSX } from "react";
 import usePrincipal from "../hooks/usePrincipal";
 import { useRouter } from "next/navigation";
+import { cleanTitle } from "@/app/image-sitemap.xml/route";
 
 const Principal: FunctionComponent = (): JSX.Element => {
   const { full, setFull } = usePrincipal();
@@ -50,13 +51,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                 key={indice}
                 className="relative w-full cursor-pointer"
                 onClick={() =>
-                  router.push(
-                    `/poster/${elemento?.title
-                      ?.replaceAll(":", "__")
-                      ?.replaceAll(" ", "-")
-                      ?.replaceAll(",", "_")
-                      ?.toLowerCase()}`
-                  )
+                  router.push(`/poster/${cleanTitle(elemento?.title)}`)
                 }
               >
                 <Image
@@ -79,13 +74,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                   key={indice}
                   className="relative w-full cursor-pointer"
                   onClick={() =>
-                    router.push(
-                      `/poster/${imagen?.title
-                        ?.replaceAll(":", "__")
-                        ?.replaceAll(" ", "-")
-                        ?.replaceAll(",", "_")
-                        ?.toLowerCase()}`
-                    )
+                    router.push(`/poster/${cleanTitle(imagen?.title)}`)
                   }
                 >
                   <Image
@@ -109,13 +98,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                   key={indice}
                   className="relative w-full cursor-pointer"
                   onClick={() =>
-                    router.push(
-                      `/poster/${imagen?.title
-                        ?.replaceAll(":", "__")
-                        ?.replaceAll(" ", "-")
-                        ?.replaceAll(",", "_")
-                        ?.toLowerCase()}`
-                    )
+                    router.push(`/poster/${cleanTitle(imagen?.title)}`)
                   }
                 >
                   <Image
@@ -138,13 +121,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                 key={indice}
                 className="relative w-full cursor-pointer"
                 onClick={() =>
-                  router.push(
-                    `/poster/${elemento?.title
-                      ?.replaceAll(":", "__")
-                      ?.replaceAll(" ", "-")
-                      ?.replaceAll(",", "_")
-                      ?.toLowerCase()}`
-                  )
+                  router.push(`/poster/${cleanTitle(elemento?.title)}`)
                 }
               >
                 <Image
@@ -167,13 +144,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                   key={indice}
                   className="relative w-full cursor-pointer"
                   onClick={() =>
-                    router.push(
-                      `/poster/${imagen?.title
-                        ?.replaceAll(":", "__")
-                        ?.replaceAll(" ", "-")
-                        ?.replaceAll(",", "_")
-                        ?.toLowerCase()}`
-                    )
+                    router.push(`/poster/${cleanTitle(imagen?.title)}`)
                   }
                 >
                   <Image
@@ -197,13 +168,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                   key={indice}
                   className="relative w-full cursor-pointer"
                   onClick={() =>
-                    router.push(
-                      `/poster/${imagen?.title
-                        ?.replaceAll(":", "__")
-                        ?.replaceAll(" ", "-")
-                        ?.replaceAll(",", "_")
-                        ?.toLowerCase()}`
-                    )
+                    router.push(`/poster/${cleanTitle(imagen?.title)}`)
                   }
                 >
                   <Image
@@ -226,13 +191,7 @@ const Principal: FunctionComponent = (): JSX.Element => {
                 key={indice}
                 className="relative w-full cursor-pointer"
                 onClick={() =>
-                  router.push(
-                    `/poster/${elemento?.title
-                      ?.replaceAll(":", "__")
-                      ?.replaceAll(" ", "-")
-                      ?.replaceAll(",", "_")
-                      ?.toLowerCase()}`
-                  )
+                  router.push(`/poster/${cleanTitle(elemento?.title)}`)
                 }
               >
                 <Image

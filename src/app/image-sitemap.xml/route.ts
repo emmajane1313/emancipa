@@ -1,6 +1,17 @@
 import { NextResponse } from "next/server";
 import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "../lib/constantes";
 
+export const cleanTitle = (title: string): string =>
+  title
+    .normalize("NFKD")
+    .replace(/['’"]/g, "")
+    .replace(/[?:!.,]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/_/g, "-")
+    .replace(/-+/g, "-")
+    .toLowerCase()
+    .trim();
+
 const locales = [
   "en",
   "es",
@@ -17,6 +28,14 @@ const locales = [
   "ym",
 ];
 
+const escapeXml = (unsafe: string) =>
+  unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://emancipa.xyz";
 
@@ -25,35 +44,27 @@ export async function GET() {
       (image) =>
         `
     <url>
-      <loc>${baseUrl}/poster/${image?.title
-          ?.toLowerCase()
-          ?.replaceAll(":", "__")
-          ?.replaceAll(",", "_")
-          ?.replaceAll(" ", "-")}/</loc>
+      <loc>${baseUrl}/poster/${cleanTitle(image?.title)}/</loc>
       ${locales
         .map(
           (locale) => `
-        <link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/poster/${image?.title
-            ?.toLowerCase()
-            ?.replaceAll(":", "__")
-            ?.replaceAll(",", "_")
-            ?.replaceAll(" ", "-")}/" ></link>
+        <link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}/poster/${cleanTitle(
+            image?.title
+          )}/" ></link>
       `
         )
         .join("")}
-      <link rel="alternate" hreflang="x-default" href="${baseUrl}/poster/${image?.title
-          ?.toLowerCase()
-          ?.replaceAll(":", "__")
-          ?.replaceAll(",", "_")
-          ?.replaceAll(" ", "-")}" ></link>
+      <link rel="alternate" hreflang="x-default" href="${baseUrl}/poster/${cleanTitle(
+          image?.title
+        )}/" ></link>
 <image:image>
           <image:loc>${INFURA_GATEWAY_INTERNAL}${image.imagen}/</image:loc>
-          <image:title><![CDATA[${
+          <image:title><![CDATA[${escapeXml(
             image.alt
-          } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:title>
-          <image:caption><![CDATA[${
+          )} | Emancipa | Emma-Jane MacKinnon-Lee]]></image:title>
+          <image:caption><![CDATA[${escapeXml(
             image.alt
-          } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:caption>
+          )} | Emancipa | Emma-Jane MacKinnon-Lee]]></image:caption>
         </image:image>
     </url>
       `
