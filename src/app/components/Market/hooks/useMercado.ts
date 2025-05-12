@@ -34,12 +34,12 @@ const useMercado = (address: `0x${string}` | undefined) => {
     try {
       const data = await getCollections(0);
       setNFTs(
-        data?.data?.collectionCreateds?.map((item: { uri: string }) => ({
-          ...item,
-          alt: IMAGE_SET?.find(
-            (image) => image?.imagen == item?.uri?.split("ipfs//")?.[1]
-          )?.alt,
-        }))
+        data?.data?.collectionCreateds?.map(
+          (item: { uri: string }, i: number) => ({
+            ...item,
+            alt: IMAGE_SET[i]?.alt,
+          })
+        )
       );
       setHasMore({
         more: data?.data?.collectionCreateds?.length >= 20 ? true : false,
@@ -59,12 +59,12 @@ const useMercado = (address: `0x${string}` | undefined) => {
 
       setNFTs([
         ...nfts,
-        ...data?.data?.collectionCreateds?.map((item: { uri: string }) => ({
-          ...item,
-          alt: IMAGE_SET?.find(
-            (image) => image?.imagen == item?.uri?.split("ipfs//")?.[1]
-          )?.alt,
-        })),
+        ...data?.data?.collectionCreateds?.map(
+          (item: { uri: string }, i: number) => ({
+            ...item,
+            alt: IMAGE_SET[i]?.alt,
+          })
+        ),
       ]);
       setHasMore({
         more: data?.data?.collectionCreateds?.length >= 20 ? true : false,
@@ -103,9 +103,6 @@ const useMercado = (address: `0x${string}` | undefined) => {
         ...nftsCollected,
         ...data?.data?.orderCreateds?.map((item: { uri: string }) => ({
           ...item,
-          alt: IMAGE_SET?.find(
-            (image) => image?.imagen == item?.uri?.split("ipfs//")?.[1]
-          )?.alt,
         })),
       ]);
       setHasMoreCollected({

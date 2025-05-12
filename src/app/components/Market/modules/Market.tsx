@@ -1,7 +1,7 @@
 import { FunctionComponent, JSX, useContext } from "react";
 import Slider from "./Slider";
 import Image from "next/image";
-import { INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
+import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
 import useMercado from "../hooks/useMercado";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useAccount } from "wagmi";
