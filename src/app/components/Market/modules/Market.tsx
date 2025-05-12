@@ -88,9 +88,7 @@ const Market: FunctionComponent = (): JSX.Element => {
                                     draggable={false}
                                     layout="fill"
                                     objectFit="cover"
-                                    alt={`${
-                                      (nft as Order)?.collection?.alt
-                                    } | Emancipa | Emma-Jane MacKinnon-Lee`}
+                                    alt={`Order | Emancipa | Emma-Jane MacKinnon-Lee`}
                                     src={`${INFURA_GATEWAY_INTERNAL}${
                                       (nft as Order)?.collection?.uri?.split(
                                         "ipfs://"
@@ -184,9 +182,7 @@ const Market: FunctionComponent = (): JSX.Element => {
                                 <Image
                                   draggable={false}
                                   layout="fill"
-                                  alt={`${
-                                    (nft as Order)?.collection?.alt
-                                  } | Emancipa | Emma-Jane MacKinnon-Lee`}
+                                  alt={`${IMAGE_SET[indice]?.alt} | Emancipa | Emma-Jane MacKinnon-Lee`}
                                   objectFit="cover"
                                   src={`${INFURA_GATEWAY_INTERNAL}${
                                     (nft as Collection)?.uri?.split(

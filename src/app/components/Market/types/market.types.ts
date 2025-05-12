@@ -3,7 +3,6 @@ export interface Collection {
   prices: string[];
   collectionId: string;
   acceptedTokens: string[];
-  alt: string;
 }
 
 export interface Order {
