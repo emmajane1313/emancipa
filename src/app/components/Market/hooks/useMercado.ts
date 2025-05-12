@@ -3,6 +3,7 @@ import { getCollections } from "../../../../../graphql/queries/getCollections";
 import { getOrders } from "../../../../../graphql/queries/getOrders";
 import { Collection, Order } from "../types/market.types";
 import { ModalContext } from "@/app/providers";
+import { IMAGE_SET } from "@/app/lib/constantes";
 
 const useMercado = (address: `0x${string}` | undefined) => {
   const context = useContext(ModalContext);
@@ -32,7 +33,14 @@ const useMercado = (address: `0x${string}` | undefined) => {
     setCargando(true);
     try {
       const data = await getCollections(0);
-      setNFTs(data?.data?.collectionCreateds);
+      setNFTs(
+        data?.data?.collectionCreateds?.map((item: { uri: string }) => ({
+          ...item,
+          alt: IMAGE_SET?.find(
+            (image) => image?.imagen == item?.uri?.split("ipfs//")?.[1]
+          )?.alt,
+        }))
+      );
       setHasMore({
         more: data?.data?.collectionCreateds?.length >= 20 ? true : false,
         skip: data?.data?.collectionCreateds?.length >= 20 ? 20 : 0,
@@ -49,7 +57,15 @@ const useMercado = (address: `0x${string}` | undefined) => {
     try {
       const data = await getCollections(hasMore.skip);
 
-      setNFTs([...nfts, ...data?.data?.collectionCreateds]);
+      setNFTs([
+        ...nfts,
+        ...data?.data?.collectionCreateds?.map((item: { uri: string }) => ({
+          ...item,
+          alt: IMAGE_SET?.find(
+            (image) => image?.imagen == item?.uri?.split("ipfs//")?.[1]
+          )?.alt,
+        })),
+      ]);
       setHasMore({
         more: data?.data?.collectionCreateds?.length >= 20 ? true : false,
         skip:
@@ -83,7 +99,15 @@ const useMercado = (address: `0x${string}` | undefined) => {
     try {
       const data = await getOrders(address!, hasMoreCollected.skip);
 
-      setNFTsCollected([...nftsCollected, ...data?.data?.orderCreateds]);
+      setNFTsCollected([
+        ...nftsCollected,
+        ...data?.data?.orderCreateds?.map((item: { uri: string }) => ({
+          ...item,
+          alt: IMAGE_SET?.find(
+            (image) => image?.imagen == item?.uri?.split("ipfs//")?.[1]
+          )?.alt,
+        })),
+      ]);
       setHasMoreCollected({
         more: data?.data?.orderCreateds?.length >= 20 ? true : false,
         skip:
