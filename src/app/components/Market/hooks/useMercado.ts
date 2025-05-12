@@ -57,15 +57,14 @@ const useMercado = (address: `0x${string}` | undefined) => {
     try {
       const data = await getCollections(hasMore.skip);
 
-      setNFTs([
-        ...nfts,
-        ...data?.data?.collectionCreateds?.map(
-          (item: { uri: string }, i: number) => ({
+      setNFTs(
+        [...nfts, ...data?.data?.collectionCreateds]?.map(
+          (item, i: number) => ({
             ...item,
             alt: IMAGE_SET[i]?.alt,
           })
-        ),
-      ]);
+        )
+      );
       setHasMore({
         more: data?.data?.collectionCreateds?.length >= 20 ? true : false,
         skip:
@@ -99,12 +98,7 @@ const useMercado = (address: `0x${string}` | undefined) => {
     try {
       const data = await getOrders(address!, hasMoreCollected.skip);
 
-      setNFTsCollected([
-        ...nftsCollected,
-        ...data?.data?.orderCreateds?.map((item: { uri: string }) => ({
-          ...item,
-        })),
-      ]);
+      setNFTsCollected([...nftsCollected, ...data?.data?.orderCreateds]);
       setHasMoreCollected({
         more: data?.data?.orderCreateds?.length >= 20 ? true : false,
         skip:
