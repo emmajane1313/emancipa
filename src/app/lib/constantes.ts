@@ -919,4 +919,11 @@ export const IMAGE_SET: {
     altura: 1601,
     alt: "Recompose who I am. Glowing fantasma on the cliff's edge.",
   },
+  {
+    title: "Up Against A System.",
+    imagen: "QmWpTs5U4ez3MDLBCCQzDZJMDewncd1JLmDA794ZY9EcvE",
+    altura: 1161,
+    anchura: 961,
+    alt: "Correctly calibrated to a world that is poorly built. I have to outthink a system that was never built to protect me. The system doesn't see context.",
+  },
 ];

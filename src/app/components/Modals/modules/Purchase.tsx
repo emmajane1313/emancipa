@@ -82,7 +82,7 @@ const Purchase: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
             })}
           </div>
           <div className="relative w-fit h-fit flex text-base">
-            {`${
+            {`${(
               Number(
                 context?.purchaseModal?.prices?.[
                   context?.purchaseModal?.acceptedTokens?.findIndex(
@@ -92,7 +92,7 @@ const Purchase: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
                 ]
               ) /
               10 ** 18
-            } ${
+            )?.toFixed(3)} ${
               TOKENS?.find(
                 (tok) =>
                   tok?.contract?.toLowerCase() ==
