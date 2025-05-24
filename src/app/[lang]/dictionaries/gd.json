@@ -1,12 +1,12 @@
 {
   "Home": {
-    "toma": "",
-    "por": "",
-    "error": "",
-    "success": "",
-    "purchase": ""
+    "toma": "Pasgan Eas-aonta Lèirsinneach: Postairean agus Stiogairean Deiseil Sràide Clò-bhuail, Paste, Sgaoileadh. A h-uile clàr CC0.",
+    "por": "le",
+    "error": "Chaidh rudeigin ceàrr :/ A bheil thu airson feuchainn a-rithist?",
+    "success": "Tha iad uile leatsa a-nis!",
+    "purchase": "CEANNAICH"
   },
   "404": {
-    "nada": ""
+    "nada": "Mearachd 404: Chaidh an duilleag a thoirt thairis le NPCn meallta. Tha sinn a’ barganachadh air a shaoradh."
   }
 }
