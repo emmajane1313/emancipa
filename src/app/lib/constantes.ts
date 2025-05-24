@@ -926,4 +926,11 @@ export const IMAGE_SET: {
     anchura: 961,
     alt: "Correctly calibrated to a world that is poorly built. I have to outthink a system that was never built to protect me. The system doesn't see context.",
   },
+  {
+    title: "Code Open-Source Privacy Tech.",
+    imagen: "QmXqiaRW4z1hmanM7yiTRAQT7SmdNDvqDwKYzYmoBWn9Sv",
+    altura: 769,
+    anchura: 1025,
+    alt: "Don't forget Len Sassaman.",
+  },
 ];
