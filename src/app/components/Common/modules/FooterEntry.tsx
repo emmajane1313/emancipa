@@ -49,6 +49,8 @@ function FooterEntry({ dict }: { dict: any }) {
               ? changeLanguage("hu")
               : path.includes("/hu/")
               ? changeLanguage("tr")
+              : path.includes("/tr/")
+              ? changeLanguage("gd")
               : changeLanguage("es")
           }
         >
@@ -79,6 +81,8 @@ function FooterEntry({ dict }: { dict: any }) {
             ? "tr"
             : path.includes("/ym/")
             ? "ym"
+            : path.includes("/gd/")
+            ? "gd"
             : "en"}
         </div>
         <div
@@ -108,6 +112,8 @@ function FooterEntry({ dict }: { dict: any }) {
               ? changeLanguage("hu")
               : path.includes("/hu/")
               ? changeLanguage("tr")
+              : path.includes("/tr/")
+              ? changeLanguage("gd")
               : changeLanguage("es")
           }
         >

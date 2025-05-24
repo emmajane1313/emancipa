@@ -26,6 +26,7 @@ const locales = [
   "hu",
   "tr",
   "ym",
+  "gd",
 ];
 
 export async function GET() {

@@ -2,7 +2,6 @@ import Footer from "../components/Common/modules/Footer";
 import Modals from "../components/Modals/modules/Modals";
 export type tParams = Promise<{ lang: string }>;
 
-
 export async function generateStaticParams() {
   return [
     { lang: "en" },
@@ -18,6 +17,7 @@ export async function generateStaticParams() {
     { lang: "ym" },
     { lang: "hu" },
     { lang: "tr" },
+    { lang: "gd" },
   ];
 }
 
