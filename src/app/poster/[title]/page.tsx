@@ -2,7 +2,11 @@ import PosterEntry from "@/app/components/Common/modules/PosterEntry";
 import { getDictionary } from "../../[lang]/dictionaries";
 import { Suspense } from "react";
 import Wrapper from "../../components/Common/modules/Wrapper";
-import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "../../lib/constantes";
+import {
+  IMAGE_SET,
+  INFURA_GATEWAY_INTERNAL,
+  LOCALES,
+} from "../../lib/constantes";
 import { Metadata } from "next";
 import { cleanTitle } from "@/app/image-sitemap.xml/route";
 
@@ -24,6 +28,15 @@ export const generateMetadata = async ({
   return {
     title: elemento?.title,
     description: elemento?.alt,
+    alternates: {
+      canonical: `https://emancipa.xyz/poster/${cleanTitle(elemento?.title!)}/`,
+      languages: LOCALES.reduce((acc, item) => {
+        acc[item] = `https://emancipa.xyz/${item}/poster/${cleanTitle(
+          elemento?.title!
+        )}/`;
+        return acc;
+      }, {} as { [key: string]: string }),
+    },
     openGraph: {
       images: `${INFURA_GATEWAY_INTERNAL}${elemento?.imagen}/`,
     },

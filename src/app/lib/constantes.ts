@@ -22,6 +22,23 @@ export const TOKENS: { symbol: string; contract: string; image: string }[] = [
   },
 ];
 
+export const LOCALES: string[] = [
+  "en",
+  "es",
+  "fr",
+  "fa",
+  "uk",
+  "ar",
+  "pt",
+  "he",
+  "yi",
+  "ja",
+  "hu",
+  "tr",
+  "ym",
+  "gd",
+];
+
 export const IMAGE_SET: {
   imagen: string;
   title: string;
