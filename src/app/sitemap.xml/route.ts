@@ -41,7 +41,7 @@ export async function GET() {
           image?.title
         )}" />
   <image:image>
-            <image:loc>${INFURA_GATEWAY_INTERNAL}${image.imagen}/</image:loc>
+            <image:loc>${INFURA_GATEWAY_INTERNAL}${image.imagen}</image:loc>
             <image:title><![CDATA[${
               image.alt
             } | Emancipa | Emma-Jane MacKinnon-Lee]]></image:title>
