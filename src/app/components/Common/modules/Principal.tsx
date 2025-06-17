@@ -3,8 +3,8 @@ import Image from "next/image";
 import { FunctionComponent, JSX } from "react";
 import usePrincipal from "../hooks/usePrincipal";
 import { useRouter } from "next/navigation";
-import { cleanTitle } from "@/app/image-sitemap.xml/route";
 import Social from "./Social";
+import { cleanTitle } from "@/app/lib/helpers/cleanTitle";
 
 const Principal: FunctionComponent = (): JSX.Element => {
   const { full, setFull } = usePrincipal();

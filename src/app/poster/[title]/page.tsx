@@ -8,7 +8,7 @@ import {
   LOCALES,
 } from "../../lib/constantes";
 import { Metadata } from "next";
-import { cleanTitle } from "@/app/image-sitemap.xml/route";
+import { cleanTitle } from "@/app/lib/helpers/cleanTitle";
 
 export async function generateStaticParams() {
   return IMAGE_SET.map((elemento) => ({

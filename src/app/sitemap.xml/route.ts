@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "../lib/constantes";
-import { cleanTitle } from "../image-sitemap.xml/route";
+import { cleanTitle } from "../lib/helpers/cleanTitle";
 
 const locales = [
   "en",

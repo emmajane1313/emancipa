@@ -1,6 +1,6 @@
 import PosterEntry from "@/app/components/Common/modules/PosterEntry";
-import { cleanTitle } from "@/app/image-sitemap.xml/route";
 import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
+import { cleanTitle } from "@/app/lib/helpers/cleanTitle";
 import { Metadata } from "next";
 
 export type posterParams = Promise<{ title: string }>;

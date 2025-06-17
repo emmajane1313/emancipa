@@ -1,16 +1,6 @@
 import { NextResponse } from "next/server";
 import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "../lib/constantes";
-
-export const cleanTitle = (title: string): string =>
-  title
-    .normalize("NFKD")
-    .replace(/[''"]/g, "")
-    .replace(/[?:!.,]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/_/g, "-")
-    .replace(/-+/g, "-")
-    .toLowerCase()
-    .trim();
+import { cleanTitle } from "../lib/helpers/cleanTitle";
 
 const locales = [
   "en",
