@@ -12,7 +12,7 @@ import { cleanTitle } from "@/app/lib/helpers/cleanTitle";
 
 export async function generateStaticParams() {
   return IMAGE_SET.map((elemento) => ({
-    title: elemento?.title,
+    title: cleanTitle(elemento?.title),
   }));
 }
 

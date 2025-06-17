@@ -7,7 +7,7 @@ export type posterParams = Promise<{ title: string }>;
 
 export async function generateStaticParams() {
   return IMAGE_SET.map((elemento) => ({
-    title: elemento?.title,
+    title: cleanTitle(elemento?.title),
   }));
 }
 

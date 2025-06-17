@@ -95,7 +95,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <Providers>{children}</Providers>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
