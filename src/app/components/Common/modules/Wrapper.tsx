@@ -13,7 +13,7 @@ export default function Wrapper({
     <>
       <div className="relative w-full h-fit flex items-center justify-start flex-col gap-4">
         {page}
-        <FooterEntry dict={dict} />
+        <FooterEntry dict={dict} lang={"en"} />
       </div>
       <ModalsEntry dict={dict} />
     </>

@@ -7,5 +7,5 @@ export default async function NotFound({ params }: { params: tParams }) {
   const { lang } = await params;
 
   const dict = await (getDictionary as (locale: any) => Promise<any>)(lang);
-  return <NotFoundEntry dict={dict} />;
+  return <NotFoundEntry dict={dict} lang={lang} />;
 }

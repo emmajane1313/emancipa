@@ -10,7 +10,7 @@ export default async function NotFound() {
       dict={dict}
       page={
         <Suspense fallback={<></>}>
-          <NotFoundEntry dict={dict} />
+          <NotFoundEntry lang={"en"} dict={dict} />
         </Suspense>
       }
     />

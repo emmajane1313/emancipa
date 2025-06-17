@@ -5,7 +5,7 @@ import {
 } from "react-icons/pi";
 import { usePathname, useRouter } from "next/navigation";
 
-function FooterEntry({ dict }: { dict: any }) {
+function FooterEntry({ dict, lang }: { dict: any; lang: string }) {
   const router = useRouter();
   const path = usePathname();
 
@@ -133,10 +133,44 @@ function FooterEntry({ dict }: { dict: any }) {
             ? "text-[0.5rem]"
             : "text-[1rem]"
         }`}
+        dir={
+          [
+            "en",
+            "es",
+            "fr",
+            "pt",
+            "gd",
+            "hu",
+            "ja",
+            "tr",
+            "ym",
+            "uk",
+          ]?.includes(lang)
+            ? "ltr"
+            : "rtl"
+        }
       >
         {dict.Home.toma}
       </div>
-      <div className="relative w-fit h-fit flex font-bit text-center break-all lowercase text-[0.6rem] text-white">
+      <div
+        className="relative w-fit h-fit flex font-bit text-center break-all lowercase text-[0.6rem] text-white"
+        dir={
+          [
+            "en",
+            "es",
+            "fr",
+            "pt",
+            "gd",
+            "hu",
+            "ja",
+            "tr",
+            "ym",
+            "uk",
+          ]?.includes(lang)
+            ? "ltr"
+            : "rtl"
+        }
+      >
         {dict?.Home?.por + " emma-jane mackinnon-lee"}
       </div>
     </div>
