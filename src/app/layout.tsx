@@ -5,12 +5,12 @@ import { LOCALES } from "./lib/constantes";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://emancipa.xyz/"),
-  title: "Emancipa",
+  title: "Emancipa by Emma-Jane MacKinnon-Lee",
   description:
     "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
   twitter: {
     card: "summary_large_image",
-    title: "Emancipa",
+    title: "Emancipa by Emma-Jane MacKinnon-Lee",
     description:
       "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
     creator: "@emmajane1313",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     }, {} as { [key: string]: string }),
   },
   openGraph: {
-    title: "Emancipa",
+    title: "Emancipa by Emma-Jane MacKinnon-Lee",
     description:
       "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
   },
