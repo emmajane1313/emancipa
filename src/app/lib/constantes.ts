@@ -49,7 +49,6 @@ export const IMAGE_SET: {
 }[] = [
   {
     imagen: "QmNrybajbY5LhWDTLsAk86PWgigHKdu8DdSoX8RmbbAq75",
-    anchura: 3038,
     socials: [
       {
         type: "Tumblr",
@@ -61,6 +60,7 @@ export const IMAGE_SET: {
       },
     ],
     title: "We Will Not Be Banned",
+    anchura: 3038,
     altura: 4696,
     alt: "Masked woman displayed on dystopian city billboard, defiant resistance message We will not be banned, cyberpunk street billboard",
   },
