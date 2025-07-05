@@ -950,4 +950,19 @@ export const IMAGE_SET: {
     anchura: 1025,
     alt: "Don't forget Len Sassaman.",
   },
+  {
+    title: "Define and Narrow Me.",
+    imagen: "QmcbywZRNPtmzrQSH3867CR6EL3xMoTiQVNiLFsiz9BaZQ",
+    altura: 1233,
+    anchura: 929,
+    alt: "Aidich e agus atharraich a h-uile sion",
+  },
+  {
+    title: "Not an object but a field of verbs",
+    imagen: "Qmcq2pvo62PxchLYQufpM4wEmdsduTvCGMFTPXNrPwL9Hq",
+    altura: 1233,
+    anchura: 929,
+    alt: "I'm a field of verbs.",
+  },
+  
 ];

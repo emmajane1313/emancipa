@@ -7,3 +7,5 @@ Women will not stay banned.
 .زن زندگی آزادی
 
 emancipa.xyz
+
+by Emma-Jane MacKinnon-Lee
