@@ -964,5 +964,18 @@ export const IMAGE_SET: {
     anchura: 929,
     alt: "I'm a field of verbs.",
   },
-  
+  {
+    title: "Ana Lama",
+    imagen: "QmbN2K8iL4Uto9BHTh4rVNio7qCFrL8DXZCxyQvvXFcfRE",
+    alt: "#analama",
+    anchura: 1095,
+    altura: 1692,
+  },
+  {
+    anchura: 1345,
+    altura: 897,
+    imagen: "QmWimxeXECHpbXFTsAPXQcLBiBJvycjHx9gP4VvGvk6wsJ",
+    alt: "Mídia social Web3, criptografada e anônima.",
+    title: "ANONwoven",
+  },
 ];
