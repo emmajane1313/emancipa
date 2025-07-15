@@ -1,3 +1,5 @@
+"use client";
+
 import { FunctionComponent, JSX, useContext } from "react";
 import Slider from "./Slider";
 import Image from "next/image";
@@ -228,7 +230,12 @@ const Market: FunctionComponent = (): JSX.Element => {
         </div>
       </div>
       <div className="absolute right-4 bottom-44 flex w-fit h-fit">
-        <div className="relative w-10 sm:w-32 h-8 sm:h-20 flex -rotate-20">
+        <div
+          className="relative cursor-pointer w-10 sm:w-32 h-8 sm:h-20 flex -rotate-20"
+          onClick={() =>
+            window.open("https://emmajanemackinnonlee-runway.com/")
+          }
+        >
           <Image
             draggable={false}
             src={`${INFURA_GATEWAY_INTERNAL}QmY7a3SW8ygnh2XD4bHh73wBrYhHNhrUJRj5J5sx3jK9zn`}
