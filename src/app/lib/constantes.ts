@@ -978,4 +978,12 @@ export const IMAGE_SET: {
     alt: "Mídia social Web3, criptografada e anônima.",
     title: "ANONwoven",
   },
+
+  {
+    anchura: 1688,
+    altura: 2794,
+    imagen: "QmUYFqsmr8GULXBGmuoffykiNZdcVJkPbPeuZTRpBkhSwJ",
+    alt: "Yet, our society broadly tolerates and defends female slavery.",
+    title: "Freedom Does Not Tolerate Slavery",
+  },
 ];
