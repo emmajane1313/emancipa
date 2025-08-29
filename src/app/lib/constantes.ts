@@ -986,4 +986,11 @@ export const IMAGE_SET: {
     alt: "Yet, our society broadly tolerates and defends female slavery.",
     title: "Freedom Does Not Tolerate Slavery",
   },
+    {
+    anchura: 1205,
+    altura: 1806,
+    imagen: "QmXdkWsvqZQjPKqjVS9miwxRafggPbYm4WggofY2rfSKW4",
+    alt: "لكل الناس",
+    title:"لكل الناس",
+  },
 ];
