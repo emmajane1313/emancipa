@@ -991,6 +991,6 @@ export const IMAGE_SET: {
     altura: 1806,
     imagen: "QmXdkWsvqZQjPKqjVS9miwxRafggPbYm4WggofY2rfSKW4",
     alt: "لكل الناس",
-    title:"لكل الناس",
+    title:"All Women",
   },
 ];
