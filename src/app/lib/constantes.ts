@@ -986,11 +986,25 @@ export const IMAGE_SET: {
     alt: "Yet, our society broadly tolerates and defends female slavery.",
     title: "Freedom Does Not Tolerate Slavery",
   },
-    {
+  {
     anchura: 1205,
     altura: 1806,
     imagen: "QmXdkWsvqZQjPKqjVS9miwxRafggPbYm4WggofY2rfSKW4",
     alt: "لكل الناس",
-    title:"All Women",
+    title: "All Women",
+  },
+  {
+    anchura: 833,
+    altura: 1154,
+    imagen: "QmXarKft3rY9sry66WaY5VFonEFtmvbanKc8yiapxnJRwU",
+    alt: "Believe Palestinian Women",
+    title: "Believe Palestinian Women",
+  },
+  {
+    anchura: 1341,
+    altura: 1156,
+    imagen: "QmT6jQM6hX9BMXKNXvKuUoysASWbWbZL2GTEdgUBtMR3Xn",
+    alt: "Advanced BioTech",
+    title: "A Powerful Technology",
   },
 ];
