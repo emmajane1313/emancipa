@@ -1007,4 +1007,11 @@ export const IMAGE_SET: {
     alt: "Advanced BioTech",
     title: "A Powerful Technology",
   },
+  {
+    anchura: 769,
+    altura: 1121,
+    imagen: "QmQkNaivNkET5rbsqxEqDFEuQJB6EW2QK39FSVHJVC9LtD",
+    alt: "Жінки Заходу",
+    title: "Women of the West",
+  },
 ];
