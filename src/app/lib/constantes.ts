@@ -1014,4 +1014,11 @@ export const IMAGE_SET: {
     alt: "Жінки Заходу",
     title: "Women of the West",
   },
+  {
+    anchura: 770,
+    altura: 1282,
+    imagen: "QmU7bMHZwa1qtgiGBty7Rq9sV22jyooQTFHUe1Sk2bSaLd",
+    alt: "Nuad's Court",
+    title: "Enter the Court of Nuad",
+  },
 ];
