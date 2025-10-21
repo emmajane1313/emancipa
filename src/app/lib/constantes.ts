@@ -1017,7 +1017,7 @@ export const IMAGE_SET: {
   {
     anchura: 770,
     altura: 1282,
-    imagen: "QmU7bMHZwa1qtgiGBty7Rq9sV22jyooQTFHUe1Sk2bSaLd",
+    imagen: "Qmbt19vZePZLWKi4ivYkMzu1wKtw79JVYMeZ2YiuKMUSfd",
     alt: "Nuad's Court",
     title: "Enter the Court of Nuad",
   },
