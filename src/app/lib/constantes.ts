@@ -1021,4 +1021,11 @@ export const IMAGE_SET: {
     alt: "Nuad's Court",
     title: "Enter the Court of Nuad",
   },
+  {
+    anchura: 769,
+    altura: 1281,
+    imagen: "QmfCiXiauqHjkBu9Y1aGsiN75r536t7Ck3K3Lafmz36d5R",
+    alt: "Wild Colonial Girls",
+    title: "Wild Colonial Girls",
+  },
 ];
