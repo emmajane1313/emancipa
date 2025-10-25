@@ -1028,4 +1028,12 @@ export const IMAGE_SET: {
     alt: "Wild Colonial Girls",
     title: "Wild Colonial Girls",
   },
+    {
+    anchura: 769,
+    altura: 1281,
+    imagen: "QmRpgEtGrMaNvdEHn1N6VASLpuWEfFMVDQ4HheVYNVN75F",
+    alt: "Tarahini çalış",
+    title: "Tarahini çalış",
+  },
 ];
+
