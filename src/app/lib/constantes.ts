@@ -1033,7 +1033,7 @@ export const IMAGE_SET: {
     altura: 1281,
     imagen: "QmRpgEtGrMaNvdEHn1N6VASLpuWEfFMVDQ4HheVYNVN75F",
     alt: "Tarahini çalış",
-    title: "Tarahini çalış",
+    title: "Study your history",
   },
 ];
 
