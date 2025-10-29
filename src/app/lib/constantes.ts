@@ -1039,7 +1039,10 @@ export const IMAGE_SET: {
     altura: 769,
     anchura: 1281,
     imagen: "Qmcv4K9dXk1t2eBGg4bjfiDfVmqNBJMjMitgAX6FnWT6DD",
-    title: "más világok és más ablakok",
-    alt: "other worlds and other windows",
+    title: "other worlds and other windows",
+    alt: "más világok és más ablakok",
   },
 ];
+
+
+
