@@ -1028,12 +1028,18 @@ export const IMAGE_SET: {
     alt: "Wild Colonial Girls",
     title: "Wild Colonial Girls",
   },
-    {
+  {
     anchura: 769,
     altura: 1281,
     imagen: "QmRpgEtGrMaNvdEHn1N6VASLpuWEfFMVDQ4HheVYNVN75F",
     alt: "Tarahini çalış",
     title: "Study your history",
   },
+  {
+    altura: 769,
+    anchura: 1281,
+    imagen: "Qmcv4K9dXk1t2eBGg4bjfiDfVmqNBJMjMitgAX6FnWT6DD",
+    title: "más világok és más ablakok",
+    alt: "other worlds and other windows",
+  },
 ];
-
