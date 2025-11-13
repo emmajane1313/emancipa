@@ -3,7 +3,6 @@ import { getCollections } from "../../../../../graphql/queries/getCollections";
 import { getOrders } from "../../../../../graphql/queries/getOrders";
 import { Collection, Order } from "../types/market.types";
 import { ModalContext } from "@/app/providers";
-import { IMAGE_SET } from "@/app/lib/constantes";
 
 const useMercado = (address: `0x${string}` | undefined) => {
   const context = useContext(ModalContext);
