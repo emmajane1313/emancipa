@@ -4,7 +4,11 @@
     "por": "par",
     "error": "Un problème est survenu :/ Réessayer ?",
     "success": "Ils sont tous à vous maintenant !",
-    "purchase": "ACHETER"
+    "purchase": "ACHETER",
+    "season-1": "Saison 1",
+    "season-2": "Saison 2",
+    "coming-soon": "Bientôt",
+    "works": "œuvres"
   },
   "404": {
     "nada": "Erreur 404 : La page a été prise en otage par des PNJ rebelles. Nous négocions sa libération."

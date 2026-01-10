@@ -4,7 +4,11 @@
     "por": "tarafından",
     "error": "Bir şeyler ters gitti :/ Tekrar denemek ister misin?",
     "success": "Artık hepsi senin!",
-    "purchase": "SATIN AL"
+    "purchase": "SATIN AL",
+    "season-1": "Sezon 1",
+    "season-2": "Sezon 2",
+    "coming-soon": "Yakında",
+    "works": "eserler"
   },
   "404": {
     "nada": "Hata 404: Bu sayfa asi NPC'ler tarafından kaçırıldı. Serbest bırakılması için müzakereler yapıyoruz."

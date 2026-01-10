@@ -4,7 +4,11 @@
     "por": "por",
     "error": "Algo ha salido mal :/ ¿Quieres intentarlo de nuevo?",
     "success": "¡Ya son todos tuyos!",
-    "purchase": "COMPRAR"
+    "purchase": "COMPRAR",
+    "season-1": "Temporada 1",
+    "season-2": "Temporada 2",
+    "coming-soon": "Próximamente",
+    "works": "obras"
   },
   "404": {
     "nada": "Error 404: La página ha sido secuestrada por NPCs rebeldes. Estamos negociando su liberación."

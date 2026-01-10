@@ -4,7 +4,11 @@
     "por": "által",
     "error": "Valami hiba történt :/ Újra próbálod?",
     "success": "Most már mind a tiéd!",
-    "purchase": "VÁSÁRLÁS"
+    "purchase": "VÁSÁRLÁS",
+    "season-1": "1. évad",
+    "season-2": "2. évad",
+    "coming-soon": "Hamarosan",
+    "works": "művek"
   },
   "404": {
     "nada": "404-es hiba: Ezt az oldalt renitens NPC-k eltérítették. Tárgyalunk a felszabadításáról."

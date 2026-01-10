@@ -4,9 +4,13 @@
     "por": "le",
     "error": "Chaidh rudeigin ceàrr :/ A bheil thu airson feuchainn a-rithist?",
     "success": "Tha iad uile leatsa a-nis!",
-    "purchase": "CEANNAICH"
+    "purchase": "CEANNAICH",
+    "season-1": "Seusan 1",
+    "season-2": "Seusan 2",
+    "coming-soon": "A dh'aithghearr",
+    "works": "obraichean"
   },
   "404": {
-    "nada": "Mearachd 404: Chaidh an duilleag a thoirt thairis le NPCn meallta. Tha sinn a’ barganachadh air a shaoradh."
+    "nada": "Mearachd 404: Chaidh an duilleag a thoirt thairis le NPCn meallta. Tha sinn a' barganachadh air a shaoradh."
   }
 }

@@ -8,7 +8,7 @@ const Entry: FunctionComponent<{ dict: any }> = ({ dict }): JSX.Element => {
   return (
     <div className="relative w-full h-fit flex flex-col items-start justify-start">
       <Market />
-      <Principal />
+      <Principal dict={dict} />
     </div>
   );
 };

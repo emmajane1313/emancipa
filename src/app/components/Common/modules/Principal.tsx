@@ -1,20 +1,30 @@
-import { IMAGE_SET, INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
+import { INFURA_GATEWAY_INTERNAL } from "@/app/lib/constantes";
 import Image from "next/image";
 import { FunctionComponent, JSX } from "react";
 import usePrincipal from "../hooks/usePrincipal";
 import { useRouter } from "next/navigation";
 import Social from "./Social";
 import { cleanTitle } from "@/app/lib/helpers/cleanTitle";
+import { useSeasons } from "../hooks/useSeasons";
+import { SeasonSelector } from "./SeasonSelector";
 
-const Principal: FunctionComponent = (): JSX.Element => {
+const Principal: FunctionComponent<{ dict?: any }> = ({ dict }): JSX.Element => {
   const { full, setFull } = usePrincipal();
   const router = useRouter();
+  const { selectedSeason, allSeasons, changeSeason } = useSeasons();
+  const IMAGE_SET = selectedSeason.imageSet;
   return (
     <div
       className="relative w-full h-fit flex gap-20 items-start justify-start flex-col pt-10"
       id={"grid"}
     >
-      <div className="sticky z-10 px-2 sm:px-4 w-full h-fit flex items-end justify-end">
+      <div className="sticky z-10 px-2 sm:px-4 w-full h-fit flex items-end justify-between">
+        <SeasonSelector
+          seasons={allSeasons}
+          selectedSeason={selectedSeason}
+          onSeasonChange={changeSeason}
+          dict={dict}
+        />
         <div className="relative w-fit h-fit flex">
           <div
             className="relative flex w-20 h-12 rounded-md border-4 border-morado bg-black items-center p-2 justify-center cursor-pointer"

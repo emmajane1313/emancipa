@@ -53,13 +53,39 @@ export default async function Poster({
   const elemento = IMAGE_SET?.find((imag) => cleanTitle(imag.title) === title);
 
   return (
-    <Wrapper
-      dict={dict}
-      page={
-        <Suspense fallback={<></>}>
-          <PosterEntry elemento={elemento!} />
-        </Suspense>
-      }
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            name: elemento?.title,
+            description: elemento?.alt,
+            contentUrl: `${INFURA_GATEWAY_INTERNAL}${elemento?.imagen}`,
+            url: `https://emancipa.xyz/poster/${cleanTitle(elemento?.title!)}/`,
+            creator: {
+              "@type": "Person",
+              name: "Emma-Jane MacKinnon-Lee",
+              url: "https://emmajanemackinnonlee.com/"
+            },
+            copyrightNotice: "CC0",
+            license: "https://creativecommons.org/publicdomain/zero/1.0/",
+            creditText: "Emma-Jane MacKinnon-Lee | Emancipa | DIGITALAX",
+            width: elemento?.anchura,
+            height: elemento?.altura,
+            keywords: "Web3 Fashion, DIGITALAX, Emma-Jane MacKinnon-Lee, Digital Art, Crypto Fashion, NFT Fashion"
+          }),
+        }}
+      />
+      <Wrapper
+        dict={dict}
+        page={
+          <Suspense fallback={<></>}>
+            <PosterEntry elemento={elemento!} />
+          </Suspense>
+        }
+      />
+    </>
   );
 }

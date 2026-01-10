@@ -39,7 +39,7 @@ export const LOCALES: string[] = [
   "gd",
 ];
 
-export const IMAGE_SET: {
+export const IMAGEN_SET_TEMPORADA_1: {
   imagen: string;
   title: string;
   anchura: number;
@@ -1043,6 +1043,17 @@ export const IMAGE_SET: {
     alt: "más világok és más ablakok",
   },
 ];
+
+export const IMAGEN_SET_TEMPORADA_2: {
+  imagen: string;
+  title: string;
+  anchura: number;
+  altura: number;
+  alt: string;
+  socials?: { type: string; link: string }[];
+}[] = [];
+
+export const IMAGE_SET = IMAGEN_SET_TEMPORADA_1;
 
 
 
