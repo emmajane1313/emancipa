@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./providers";
-import { LOCALES } from "./lib/constantes";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://emancipa.xyz/"),
@@ -14,13 +13,6 @@ export const metadata: Metadata = {
     description:
       "We will not be banned. Todos los géneros, todos los amores, todas las vidas, no seremos prohibidos. Women will not stay banned. زن زندگی آزادی",
     creator: "@emmajane1313",
-  },
-  alternates: {
-    canonical: `https://emancipa.xyz/`,
-    languages: LOCALES.reduce((acc, item) => {
-      acc[item] = `https://emancipa.xyz/${item}/`;
-      return acc;
-    }, {} as { [key: string]: string }),
   },
   openGraph: {
     title: "Emancipa by Emma-Jane MacKinnon-Lee",

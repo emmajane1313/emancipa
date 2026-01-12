@@ -71,6 +71,8 @@ export default async function Poster({
             },
             copyrightNotice: "CC0",
             license: "https://creativecommons.org/publicdomain/zero/1.0/",
+            acquireLicensePage:
+              "https://creativecommons.org/publicdomain/zero/1.0/",
             creditText: "Emma-Jane MacKinnon-Lee | Emancipa | DIGITALAX",
             width: elemento?.anchura,
             height: elemento?.altura,
